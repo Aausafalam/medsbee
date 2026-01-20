@@ -1,0 +1,67 @@
+export const comparisonData = {
+  features: [
+    {
+      id: 1,
+      name: 'Features',
+      basic: '✓',
+      pro: '✓',
+      premium: '✓',
+    },
+    {
+      id: 2,
+      name: 'Basic Video Lessons',
+      basic: '✓',
+      pro: '✓',
+      premium: '✓',
+    },
+    {
+      id: 3,
+      name: 'Study Materials',
+      basic: '✓',
+      pro: '✓',
+      premium: '✓',
+    },
+    {
+      id: 4,
+      name: 'Lifetime Access',
+      basic: '✓',
+      pro: '✓',
+      premium: '✓',
+    },
+    {
+      id: 5,
+      name: 'Weekly Live Sessions',
+      basic: '✗',
+      pro: '✓',
+      premium: '✓',
+    },
+    {
+      id: 6,
+      name: '1-on-1 Consultations',
+      basic: '✗',
+      pro: '✓',
+      premium: '✓',
+    },
+    {
+      id: 7,
+      name: 'Priority Support',
+      basic: '✗',
+      pro: '✓',
+      premium: '✓',
+    },
+    {
+      id: 8,
+      name: 'Customized Wealth Plans',
+      basic: '✗',
+      pro: '✗',
+      premium: '✓',
+    },
+    {
+      id: 9,
+      name: 'VIP Community Access',
+      basic: '✗',
+      pro: '✗',
+      premium: '✓',
+    },
+  ],
+}
