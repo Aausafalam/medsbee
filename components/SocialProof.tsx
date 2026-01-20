@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { socialProofData } from "@/data/socialProof";
 import { Play, X, ChevronLeft, ChevronRight } from "lucide-react";
+import "../styles/globals.css";
 
 export default function SocialProof() {
     const [activeVideo, setActiveVideo] = useState<string | null>(null);
@@ -34,6 +35,7 @@ export default function SocialProof() {
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button
                                 onClick={() => openVideo(socialProofData.mainVideoUrl)}
+                                data-main-video-btn
                                 className="flex cursor-pointer items-center justify-center gap-2 border-2 border-primary/20 text-primary font-bold hover:border-primary hover:bg-primary hover:text-white transition-all px-8 py-3 rounded-full text-base group"
                             >
                                 <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
@@ -51,7 +53,7 @@ export default function SocialProof() {
                     </div>
 
                     <div className="relative group/carousel">
-                        <div className="flex overflow-x-auto pb-4 pt-2 gap-4 md:gap-5 snap-x snap-mandatory no-scrollbar cursor-grab active:cursor-grabbing">
+                        <div className="flex overflow-x-auto pb-4 pt-2 gap-4 md:gap-5 snap-x snap-mandatory no-scrollbar  cursor-grab active:cursor-grabbing">
                             {socialProofData.testimonials.map((testimonial) => (
                                 <div
                                     key={testimonial.id}

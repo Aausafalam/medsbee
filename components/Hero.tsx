@@ -13,9 +13,9 @@ export default function Hero() {
             <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
                     {/* Image - Left Side */}
-                    <div className="relative h-[400px] md:h-[600px] flex items-end justify-center -mb-12 md:-mb-20">
+                    <div className="order-2 md:order-1 relative h-[400px] md:h-[600px] flex items-end justify-center -mb-12 md:-mb-20">
                         <div className="relative w-full h-full max-w-lg mx-auto">
-                            {/* Decorative elements - subtle coins/icons */}
+                            {/* Decorative elements */}
                             <div className="absolute -top-12 -left-12 z-10 animate-pulse">
                                 <svg width="100" height="100" viewBox="0 0 100 100" className="opacity-40">
                                     <circle cx="30" cy="30" r="15" stroke="white" strokeWidth="1" fill="none" />
@@ -24,7 +24,6 @@ export default function Hero() {
                                 </svg>
                             </div>
 
-                            {/* Main Image with refined presentation */}
                             <div className="relative w-full h-full flex items-end">
                                 <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-110"></div>
                                 <div className="relative w-full h-[110%] flex items-end justify-center">
@@ -39,11 +38,12 @@ export default function Hero() {
                                 </div>
                             </div>
 
-                            {/* Decorative icons - bottom right */}
                             <div className="absolute bottom-4 -right-12 z-10">
                                 <svg width="120" height="120" viewBox="0 0 100 100" className="opacity-40">
                                     <circle cx="40" cy="50" r="18" stroke="white" strokeWidth="1" fill="none" />
-                                    <text x="40" y="56" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">₹</text>
+                                    <text x="40" y="56" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">
+                                        ₹
+                                    </text>
                                     <circle cx="65" cy="40" r="14" stroke="white" strokeWidth="1" fill="none" />
                                 </svg>
                             </div>
@@ -51,25 +51,20 @@ export default function Hero() {
                     </div>
 
                     {/* Content - Right Side */}
-                    <div className="space-y-8">
+                    <div className="order-1 md:order-2 space-y-8">
                         <div className="space-y-4">
-                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] text-white tracking-tight">
-                                {heroData.headline}
-                            </h1>
+                            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] text-white tracking-tight">{heroData.headline}</h1>
+
                             <div className="relative inline-block">
                                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight">
                                     Now Master <span className="text-secondary italic">Money.</span>
                                 </h1>
-                                {/* Decorative underline */}
                                 <div className="absolute -bottom-3 left-0 w-full max-w-[22ch] h-2 bg-secondary rounded-full opacity-80"></div>
                             </div>
                         </div>
 
-                        <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-xl font-medium">
-                            {heroData.description}
-                        </p>
+                        <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-xl font-medium">{heroData.description}</p>
 
-                        {/* CTA Buttons */}
                         <div className="flex flex-wrap gap-4 pt-4">
                             <Link
                                 href={heroData.primaryCta.href}
