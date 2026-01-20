@@ -38,13 +38,14 @@ export default function Highlight() {
           </div>
 
           {/* Image */}
-          <div className="relative h-[400px] md:h-[500px] order-1 md:order-2">
-            <div className="absolute inset-0 border-2 border-secondary/30 rounded-3xl translate-x-4 translate-y-4"></div>
+          <div className="relative h-[350px] md:h-[500px] order-1 md:order-2 group">
+            <div className="absolute inset-x-4 -inset-y-4 bg-secondary/10 rounded-3xl rotate-2 transition-transform group-hover:rotate-0"></div>
             <Image
               src={highlightData.image.src || "/placeholder.svg"}
               alt={highlightData.image.alt}
               fill
-              className="object-cover rounded-3xl shadow-2xl relative z-10"
+              className="object-cover rounded-3xl shadow-xl relative z-10"
+              priority
             />
           </div>
         </div>

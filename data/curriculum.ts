@@ -1,6 +1,10 @@
 export const curriculumData = {
   title: 'Course Curriculum',
   subtitle: 'Self-placed modules, watch anytime.',
+  image: {
+    src: '/curriculum_wealth_learning.png',
+    alt: 'Professional learning environment illustration',
+  },
   modules: [
     {
       id: 1,

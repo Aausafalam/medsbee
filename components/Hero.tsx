@@ -13,7 +13,7 @@ export default function Hero() {
             <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
                     {/* Image - Left Side */}
-                    <div className="relative h-[400px] md:h-[600px] flex items-end justify-center -mb-12 md:-mb-16">
+                    <div className="relative h-[400px] md:h-[600px] flex items-end justify-center -mb-12 md:-mb-20">
                         <div className="relative w-full h-full max-w-lg mx-auto">
                             {/* Decorative elements - subtle coins/icons */}
                             <div className="absolute -top-12 -left-12 z-10 animate-pulse">
@@ -58,10 +58,10 @@ export default function Hero() {
                             </h1>
                             <div className="relative inline-block">
                                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.1] tracking-tight">
-                                    Now Master <span className="text-secondary italic">Money</span>.
+                                    Now Master <span className="text-secondary italic">Money.</span>
                                 </h1>
                                 {/* Decorative underline */}
-                                <div className="absolute -bottom-3 left-0 w-full h-2 bg-secondary rounded-full opacity-80"></div>
+                                <div className="absolute -bottom-3 left-0 w-full max-w-[22ch] h-2 bg-secondary rounded-full opacity-80"></div>
                             </div>
                         </div>
 
