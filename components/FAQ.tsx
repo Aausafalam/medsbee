@@ -8,8 +8,8 @@ export default function FAQ() {
   const [expandedId, setExpandedId] = useState<number | null>(null)
 
   return (
-    <section id="faqs" className="py-20 md:py-32 bg-white">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <section id="faqs" className="py-12 md:py-16 bg-white">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center md:text-left mb-16 md:mb-24">
           <p className="text-lg font-semibold text-primary mb-4 uppercase tracking-widest">{faqData.title}</p>

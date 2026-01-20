@@ -5,8 +5,8 @@ import { Check } from 'lucide-react'
 
 export default function Comparison() {
   return (
-    <section className="py-20 md:py-32 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="py-12 md:py-16 bg-white">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         {/* Comparison Table - Desktop */}
         <div className="overflow-x-auto shadow-2xl rounded-[2rem] border border-blue-100 overflow-hidden">
           <table className="w-full text-left border-collapse">

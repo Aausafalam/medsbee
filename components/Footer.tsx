@@ -21,8 +21,8 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-primary text-white py-20 md:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <footer className="bg-primary text-white py-12 md:py-16">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
           {/* Brand Column */}

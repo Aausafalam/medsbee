@@ -7,8 +7,8 @@ import { Play } from 'lucide-react'
 
 export default function SocialProof() {
   return (
-    <section id="testimonials" className="py-20 md:py-32 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-12 md:py-16 bg-white">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <div className="space-y-12">
           {/* Header with Title and Buttons */}
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">

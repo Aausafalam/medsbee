@@ -1,6 +1,6 @@
 export const socialProofData = {
   title: 'Trusted by',
-  titleHighlight: 'top medical doctors',
+  titleHighlight: 'Top medical doctors',
   playVideoLabel: 'Play Video',
   cta: { label: 'Enroll Now', href: '#pricing' },
   testimonials: [
@@ -46,15 +46,6 @@ export const socialProofData = {
       handle: '@rajshamani',
       followers: '500K+ followers',
       image: 'https://images.unsplash.com/photo-1507009596925-8c76c12b63a0?w=300&q=80',
-      alt: 'Raj Shamani',
-      description: '',
-    },
-    {
-      id: 6,
-      name: 'Raj Shamani',
-      handle: '@rajshamani',
-      followers: '500K+ followers',
-      image: 'https://images.unsplash.com/photo-1517253356684-90ef3b2e7929?w=300&q=80',
       alt: 'Raj Shamani',
       description: '',
     },
