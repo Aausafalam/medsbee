@@ -37,13 +37,13 @@ export default function StickyCTA() {
                     className="flex  items-center gap-3 px-6 py-2 text-white hover:text-secondary transition-colors group"
                 >
                     <Play size={18} className="fill-current" />
-                    <span className="font-bold text-sm md:text-base tracking-wide cursor-pointer">Play Video</span>
+                    <span className="font-bold text-sm md:text-base tracking-wide cursor-pointer whitespace-nowrap">Play Video</span>
                 </button>
 
                 {/* Enroll Now Button */}
                 <Link
                     href="#pricing"
-                    className="bg-secondary text-primary px-8 md:px-12 py-3 md:py-3.5 rounded-full font-bold text-sm md:text-base hover:bg-yellow-400 transition-all hover:scale-[1.02] active:scale-95 shadow-lg"
+                    className="bg-secondary text-primary px-8 md:px-12 py-3 md:py-3.5 whitespace-nowrap rounded-full font-bold text-sm md:text-base hover:bg-yellow-400 transition-all hover:scale-[1.02] active:scale-95 shadow-lg"
                 >
                     Enroll Now
                 </Link>
