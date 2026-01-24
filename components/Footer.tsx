@@ -24,7 +24,7 @@ export default function Footer() {
     <footer className="bg-[#0a192f] text-white py-12 md:py-20">
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 md:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16 md:mb-20">
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2 font-bold text-2xl group">
@@ -96,9 +96,9 @@ export default function Footer() {
         <div className="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-bold uppercase tracking-widest text-blue-100/40">
           <p>{footerData.copyright}</p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-secondary transition-colors">Privacy</Link>
-            <Link href="#" className="hover:text-secondary transition-colors">Terms</Link>
-            <Link href="#" className="hover:text-secondary transition-colors">License</Link>
+            <Link href="/privacy" className="hover:text-secondary transition-colors">Privacy</Link>
+            <Link href="/terms" className="hover:text-secondary transition-colors">Terms</Link>
+            <Link href="/disclaimer" className="hover:text-secondary transition-colors">Disclaimer</Link>
           </div>
         </div>
       </div>
