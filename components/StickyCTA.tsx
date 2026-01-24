@@ -24,8 +24,8 @@ export default function StickyCTA() {
     if (!isVisible) return null
 
     return (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-full max-w-[90%] md:max-w-xl animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div className="bg-[#0a192f] max-w-xl rounded-full p-2 md:p-2.5 flex items-center justify-between shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-white/5 backdrop-blur-sm">
+        <div className="fixed bottom-6 max-w-fit left-1/2 -translate-x-1/2 z-[100] w-full  animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <div className="bg-[#0a192f] max-w-fit rounded-full p-2 md:p-2.5 flex items-center justify-between shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-white/5 backdrop-blur-sm">
                 {/* Play Video Action */}
                 <button
                     onClick={() => {
@@ -34,10 +34,10 @@ export default function StickyCTA() {
                         const videoBtn = document.querySelector('[data-main-video-btn]') as HTMLButtonElement
                         if (videoBtn) videoBtn.click()
                     }}
-                    className="flex items-center gap-3 pl-6 pr-4 py-2 text-white hover:text-secondary transition-colors group"
+                    className="flex  items-center gap-3 px-6 py-2 text-white hover:text-secondary transition-colors group"
                 >
                     <Play size={18} className="fill-current" />
-                    <span className="font-bold text-sm md:text-base tracking-wide">Play Video</span>
+                    <span className="font-bold text-sm md:text-base tracking-wide cursor-pointer">Play Video</span>
                 </button>
 
                 {/* Enroll Now Button */}

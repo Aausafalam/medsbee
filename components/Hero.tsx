@@ -6,7 +6,7 @@ import { heroData } from "@/data/hero";
 
 export default function Hero() {
     return (
-        <section className="relative bg-[#0a192f] text-white  overflow-hidden min-h-[70vh]  flex items-center">
+        <section className="relative bg-[#0a192f] text-white  overflow-hidden min-h-[65vh]  flex items-center">
             {/* Enhanced Background with subtle swirling lines and glows */}
             <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
                 <div
@@ -22,11 +22,11 @@ export default function Hero() {
             <div className="mx-auto max-w-[1450px] px-4  relative z-10 w-full">
                 <div className="flex flex-col md:flex-row gap-10 lg:gap-16 items-center p-0">
                     {/* Image - Left Side (Restored size for a more beautiful look) */}
-                    <div className="order-2 md:order-1  relative h-[400px] md:h-[600px] lg:h-[700px] w-full md:w-[42%] lg:w-[40%] flex items-end justify-center flex-shrink-0">
+                    <div className="order-2 md:order-1  relative h-[400px] md:h-[600px] lg:h-[660px] w-full md:w-[42%] lg:w-[40%] flex items-end justify-center flex-shrink-0">
                         <div className="relative w-full h-full max-w-lg mx-auto">
                             <div className="relative w-full h-full flex items-end">
                                 <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-110"></div>
-                                <div className="relative w-full h-[110%] flex items-end justify-center">
+                                <div className="relative w-full h-[110%] absolute bottom-0 flex items-end justify-center">
                                     <Image
                                         src={`/${heroData.image.src}`}
                                         alt={heroData.image.alt}
@@ -51,12 +51,12 @@ export default function Hero() {
                     </div>
 
                     {/* Content - Right Side (Wider container to accommodate single-line text naturally) */}
-                    <div className="order-1 md:order-2 mt-12 md:mt-0  flex flex-col items-start space-y-6 md:space-y-10 flex-grow w-full md:w-[58%] lg:w-[60%]">
+                    <div className="order-1 md:order-2 mt-8 md:mt-0  flex flex-col items-start space-y-6 md:space-y-10 flex-grow w-full md:w-[58%] lg:w-[60%]">
                         <div className="space-y-1 md:space-y-2 lg:space-y-4">
-                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[72px] font-normal leading-[1.1] text-white tracking-tight drop-shadow-sm">{heroData.headline}</h1>
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[66px]  md:font-normal font-semibold  leading-[1.1] text-white tracking-tight drop-shadow-sm">{heroData.headline}</h1>
 
                             <div className="relative inline-block mt-1 md:mt-2">
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[72px] font-normal leading-[1.1] text-white tracking-tight">
+                                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[66px] md:font-normal font-semibold leading-[1.1] text-white tracking-tight">
                                     Now Master{" "}
                                     <span className="text-secondary relative">
                                         Money.
