@@ -5,7 +5,7 @@ import * as Icons from "lucide-react";
 
 export default function Features() {
     return (
-        <section className="py-10 md:py-16 bg-gray-50 overflow-hidden">
+        <section id="features" className="py-10 md:py-16 bg-gray-50 overflow-hidden">
             <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-10 md:mb-14">

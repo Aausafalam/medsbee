@@ -4,30 +4,22 @@ export const footerData = {
     'Empowering doctors and healthcare professionals to build wealth and financial security.',
   sections: [
     {
-      title: 'Product',
+      title: 'Our Program',
       links: [
-        { label: 'Courses', href: '#courses' },
+        { label: 'Curriculum', href: '#curriculum' },
+        { label: 'Roadmap', href: '#roadmap' },
+        { label: 'Features', href: '#features' },
         { label: 'Pricing', href: '#pricing' },
-        { label: 'Free Resources', href: '#resources' },
-        { label: 'Blog', href: '#blog' },
-      ],
-    },
-    {
-      title: 'Company',
-      links: [
-        { label: 'About Us', href: '#about' },
-        { label: 'Contact', href: '#contact' },
-        { label: 'Careers', href: '#careers' },
-        { label: 'Press', href: '#press' },
+        { label: 'FAQs', href: '#faqs' },
       ],
     },
     {
       title: 'Legal',
       links: [
-        { label: 'Privacy Policy', href: '#privacy' },
-        { label: 'Terms of Service', href: '#terms' },
-        { label: 'Cookie Policy', href: '#cookies' },
-        { label: 'Disclaimer', href: '#disclaimer' },
+        { label: 'Privacy Policy', href: '/privacy' },
+        { label: 'Terms of Service', href: '/terms' },
+        { label: 'Cookie Policy', href: '/cookies' },
+        { label: 'Disclaimer', href: '/disclaimer' },
       ],
     },
   ],
