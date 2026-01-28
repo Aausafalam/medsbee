@@ -51,9 +51,9 @@ export default function Hero() {
                     </div>
 
                     {/* Content - Right Side (Wider container to accommodate single-line text naturally) */}
-                    <div className="order-1 md:order-2 mt-12 md:mt-0  flex flex-col items-start space-y-6 md:space-y-10 flex-grow w-full md:w-[58%] lg:w-[60%]">
+                    <div className="order-1 md:order-2 mt-8 md:mt-0 flex flex-col items-center md:items-start text-center md:text-left space-y-6 md:space-y-10 flex-grow w-full md:w-[58%] lg:w-[60%]">
                         <div className="space-y-1 md:space-y-2 lg:space-y-4">
-                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[66px]  md:font-normal font-semibold  leading-[1.1] text-white tracking-tight drop-shadow-sm">{heroData.headline}</h1>
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[66px] md:font-normal font-semibold leading-[1.1] text-white tracking-tight drop-shadow-sm">{heroData.headline}</h1>
 
                             <div className="relative inline-block mt-1 md:mt-2">
                                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[66px] md:font-normal font-semibold leading-[1.1] text-white tracking-tight">
@@ -74,11 +74,11 @@ export default function Hero() {
                             </div>
                         </div>
 
-                        <p className="text-base sm:text-lg md:text-xl lg:text-xl text-white/90 leading-relaxed font-normal border-l-4 border-secondary/40 pl-4 max-w-none mt-5">
+                        <p className="text-base sm:text-lg md:text-xl lg:text-xl text-white/90 leading-relaxed font-normal border-l-0 md:border-l-4 border-secondary/40 pl-0 md:pl-4 max-w-none mt-5">
                             {heroData.description}
                         </p>
 
-                        <div className="flex flex-wrap gap-4 md:gap-8 pt-2">
+                        <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 pt-2">
                             <Link
                                 href={heroData.primaryCta.href}
                                 className="group relative isolate overflow-hidden inline-flex items-center justify-center bg-secondary text-primary px-8 md:px-11 py-3 md:py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-lg md:text-2xl shadow-[0_10px_30px_rgba(255,215,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,215,0,0.5)] active:scale-95"

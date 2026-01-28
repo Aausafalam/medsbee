@@ -13,8 +13,8 @@ export default function Curriculum() {
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
-          <p className="text-base font-semibold text-primary mb-3 uppercase tracking-widest">{curriculumData.title}</p>
-          <h2 className="text-3xl md:text-5xl font-bold text-primary leading-tight">
+          <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest">{curriculumData.title}</p>
+          <h2 className="text-2xl md:text-5xl font-bold text-primary leading-tight">
             Self-placed modules, watch anytime.
           </h2>
         </div>
@@ -22,7 +22,7 @@ export default function Curriculum() {
         {/* Accordion Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left side Illustration/Image */}
-          <div className="relative h-[350px] md:h-[500px] group">
+          <div className="relative h-[350px] md:h-[500px] group hidden md:block">
             <div className="absolute inset-x-4 -inset-y-4 bg-primary/5 rounded-3xl rotate-2 transition-transform group-hover:rotate-0"></div>
             <Image
               src={curriculumData.image.src || "/placeholder.svg"}
@@ -47,10 +47,10 @@ export default function Curriculum() {
                   onClick={() =>
                     setExpandedId(expandedId === module.id ? null : module.id)
                   }
-                  className="w-full px-6 py-4 flex items-center justify-between text-left group"
+                  className="w-full px-5 md:px-6 py-4 flex items-center justify-between text-left group"
                   aria-expanded={expandedId === module.id}
                 >
-                  <span className={`text-lg font-bold transition-colors ${expandedId === module.id ? 'text-primary' : 'text-gray-700'
+                  <span className={`text-base md:text-lg font-semibold md:font-bold transition-colors ${expandedId === module.id ? 'text-primary' : 'text-gray-700'
                     }`}>
                     {module.title}
                   </span>
@@ -65,7 +65,7 @@ export default function Curriculum() {
                 </button>
 
                 {expandedId === module.id && (
-                  <div className="px-6 pb-4 animate-in fade-in slide-in-from-top-1 duration-200">
+                  <div className="px-5 md:px-6 pb-4 animate-in fade-in slide-in-from-top-1 duration-200">
                     <p className="text-gray-600 leading-relaxed text-sm font-medium">
                       {module.description}
                     </p>

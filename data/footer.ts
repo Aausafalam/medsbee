@@ -29,5 +29,5 @@ export const footerData = {
     { name: 'LinkedIn', href: '#', icon: 'linkedin' },
     { name: 'YouTube', href: '#', icon: 'youtube' },
   ],
-  copyright: '© 2025 Medsbee. All rights reserved.',
+  copyright: '© 2026 Medsbee. All rights reserved.',
 }

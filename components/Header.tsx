@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { headerData } from '@/data/header'
 import { Menu, X } from 'lucide-react'
 
@@ -10,45 +11,17 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-primary text-primary-foreground">
-      <nav className="mx-auto flex max-w-[1440px] items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex max-w-[1440px] items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 font-bold text-2xl group">
-          <div className="flex items-center gap-2">
-            {/* Stethoscope icon forming heart shape */}
-            <div className="relative">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 28 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-secondary group-hover:scale-110 transition-transform"
-              >
-                <path
-                  d="M14 3C10 3 7 6 7 10c0 4 7 11 7 11s7-7 7-11c0-4-3-7-7-7z"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  fill="currentColor"
-                  fillOpacity="0.3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M14 10v8"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-                <circle cx="10" cy="10" r="2" stroke="currentColor" strokeWidth="2" fill="none" />
-                <circle cx="18" cy="10" r="2" stroke="currentColor" strokeWidth="2" fill="none" />
-              </svg>
-            </div>
-            {/* Logo text */}
-            <div className="flex items-baseline">
-              <span className="text-white font-bold tracking-tight">Meds</span>
-              <span className="text-secondary font-bold italic ml-0.5">Bee</span>
-              <div className="w-1.5 h-1.5 rounded-full bg-secondary ml-1 self-center"></div>
-            </div>
+          <div className="relative w-40 h-12 md:w-40 md:h-12">
+            <Image
+              src="/medsbee-logo 1.png"
+              alt="MedsBee Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </Link>
 

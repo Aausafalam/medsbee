@@ -1,9 +1,11 @@
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
+import SneakPeek from '@/components/SneakPeek'
 import SocialProof from '@/components/SocialProof'
 import Roadmap from '@/components/Roadmap'
 import Highlight from '@/components/Highlight'
 import Curriculum from '@/components/Curriculum'
+import Instructor from '@/components/Instructor'
 import Features from '@/components/Features'
 import Pricing from '@/components/Pricing'
 import Comparison from '@/components/Comparison'
@@ -19,9 +21,11 @@ export default function Home() {
         <Hero />
         <SocialProof />
         <Roadmap />
-        <Highlight />
+        {/* <Highlight /> */}
+        <Instructor />
         <Curriculum />
         <Features />
+        <SneakPeek />
         <Pricing />
         {/* <Comparison /> */}
         <FAQ />

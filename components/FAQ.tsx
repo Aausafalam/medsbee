@@ -12,8 +12,8 @@ export default function FAQ() {
             <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-10 md:mb-12">
-                    <p className="text-base font-semibold text-primary mb-3 uppercase tracking-widest">{faqData.title}</p>
-                    <h2 className="text-3xl md:text-5xl font-bold text-primary leading-tight">Frequently Asked Questions</h2>
+                    <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest">{faqData.title}</p>
+                    <h2 className="text-2xl md:text-5xl font-bold text-primary leading-tight">Frequently Asked Questions</h2>
                 </div>
 
                 {/* FAQ Accordion */}
@@ -21,22 +21,19 @@ export default function FAQ() {
                     {faqData.faqs.map((faq) => (
                         <div
                             key={faq.id}
-                            className={`rounded-xl overflow-hidden transition-all duration-300 ${
-                                expandedId === faq.id ? "ring-1 ring-primary shadow-md" : "border border-gray-100 hover:border-blue-200"
-                            }`}
+                            className={`rounded-xl overflow-hidden transition-all duration-300 ${expandedId === faq.id ? "ring-1 ring-primary shadow-md" : "border border-gray-100 hover:border-blue-200"
+                                }`}
                         >
                             <button
                                 onClick={() => setExpandedId(expandedId === faq.id ? null : faq.id)}
-                                className={`w-full px-6 py-4 flex items-center justify-between font-bold text-lg transition-all ${
-                                    expandedId === faq.id ? "bg-blue-50 text-primary" : "bg-white text-primary hover:bg-gray-50"
-                                }`}
+                                className={`w-full px-5 md:px-6 py-4 flex items-center justify-between font-semibold md:font-bold text-base md:text-lg transition-all ${expandedId === faq.id ? "bg-blue-50 text-primary" : "bg-white text-primary hover:bg-gray-50"
+                                    }`}
                                 aria-expanded={expandedId === faq.id}
                             >
                                 <span className="text-left leading-snug">{faq.question}</span>
                                 <div
-                                    className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center transition-all ${
-                                        expandedId === faq.id ? "bg-primary text-white" : "bg-secondary text-primary"
-                                    }`}
+                                    className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center transition-all ${expandedId === faq.id ? "bg-primary text-white" : "bg-secondary text-primary"
+                                        }`}
                                 >
                                     <ChevronDown size={16} className={`transition-transform duration-300 ${expandedId === faq.id ? "rotate-180" : ""}`} />
                                 </div>

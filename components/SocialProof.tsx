@@ -27,13 +27,13 @@ export default function SocialProof() {
                     {/* Header with Title and Buttons */}
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                         <div className="max-w-2xl text-center md:text-left">
-                            <p className="text-base font-semibold text-primary mb-3 uppercase tracking-widest">{socialProofData.title}</p>
-                            <h2 className="text-3xl md:text-5xl font-bold text-primary leading-tight">{socialProofData.titleHighlight}</h2>
+                            <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest">{socialProofData.title}</p>
+                            <h2 className="text-2xl md:text-5xl font-bold text-primary leading-tight">{socialProofData.titleHighlight}</h2>
                         </div>
 
                         {/* CTA Buttons */}
-                        <div className="flex flex-col sm:flex-row gap-4">
-                            <button
+                        <div className="hidden md:flex flex-col sm:flex-row gap-4">
+                            {/* <button
                                 onClick={() => openVideo(socialProofData.mainVideoUrl)}
                                 data-main-video-btn
                                 className="flex cursor-pointer items-center justify-center gap-2 border-2 border-primary/20 text-primary font-bold hover:border-primary hover:bg-primary hover:text-white transition-all px-8 py-3 rounded-full text-base group"
@@ -42,7 +42,7 @@ export default function SocialProof() {
                                     <Play size={14} className="fill-current ml-0.5" />
                                 </div>
                                 {socialProofData.playVideoLabel}
-                            </button>
+                            </button> */}
                             <Link
                                 href={socialProofData.cta.href}
                                 className="bg-secondary text-primary px-10 py-3 rounded-full font-bold hover:bg-yellow-400 transition-all text-center text-base hover:shadow-xl active:scale-95 flex items-center justify-center"
@@ -63,8 +63,8 @@ export default function SocialProof() {
                                     {/* Image Container */}
                                     <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden mb-3 shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 border border-gray-50">
                                         <Image
-                                            src={testimonial.image || "/placeholder.svg"}
-                                            alt={testimonial.alt}
+                                            src={testimonial.image ?? "/placeholder.svg"}
+                                            alt={testimonial.alt || testimonial.name}
                                             fill
                                             className="object-cover group-hover:scale-105 transition-transform duration-700"
                                         />
@@ -90,6 +90,16 @@ export default function SocialProof() {
                                 </div>
                             ))}
                         </div>
+                    </div>
+
+                    {/* Mobile CTA Button - Below Carousel */}
+                    <div className="flex md:hidden flex-col gap-4 mt-2">
+                        <Link
+                            href={socialProofData.cta.href}
+                            className="bg-secondary text-primary px-10 py-3 rounded-full font-bold hover:bg-yellow-400 transition-all text-center text-base hover:shadow-xl active:scale-95 flex items-center justify-center"
+                        >
+                            {socialProofData.cta.label}
+                        </Link>
                     </div>
                 </div>
             </div>

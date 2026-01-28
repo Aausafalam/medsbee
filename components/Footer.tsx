@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { footerData } from '@/data/footer'
 import { Facebook, Twitter, Linkedin, Youtube } from 'lucide-react'
 
@@ -28,28 +29,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-2 font-bold text-2xl group">
-              <svg
-                width="32"
-                height="32"
-                viewBox="0 0 28 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-secondary"
-              >
-                <path
-                  d="M14 3C10 3 7 6 7 10c0 4 7 11 7 11s7-7 7-11c0-4-3-7-7-7z"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  fill="currentColor"
-                  fillOpacity="0.3"
+              <div className="relative w-48 h-12 md:w-48 md:h-14">
+                <Image
+                  src="/medsbee-logo 1.png"
+                  alt="MedsBee Logo"
+                  fill
+                  className="object-contain"
                 />
-                <path d="M14 10v8" stroke="currentColor" strokeWidth="2.5" />
-                <circle cx="10" cy="10" r="2" stroke="currentColor" strokeWidth="2" fill="none" />
-                <circle cx="18" cy="10" r="2" stroke="currentColor" strokeWidth="2" fill="none" />
-              </svg>
-              <div className="flex items-baseline">
-                <span className="text-white font-bold tracking-tight">Meds</span>
-                <span className="text-secondary font-bold italic ml-0.5">Bee</span>
               </div>
             </Link>
             <p className="text-sm text-blue-100/60 leading-relaxed font-medium">
