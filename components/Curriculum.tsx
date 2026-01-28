@@ -54,7 +54,7 @@ export default function Curriculum() {
                     }`}>
                     {module.title}
                   </span>
-                  <div className={`w-7 h-7 rounded-full flex items-center justify-center transition-all ${expandedId === module.id ? 'bg-primary text-white' : 'bg-secondary text-primary'
+                  <div className={`min-w-7 h-7 rounded-full flex items-center justify-center transition-all ${expandedId === module.id ? 'bg-primary text-white' : 'bg-secondary text-primary'
                     }`}>
                     <ChevronDown
                       size={16}

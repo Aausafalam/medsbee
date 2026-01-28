@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
 
           {/* Social & Support */}
-          <div className="flex flex-col items-end gap-8 text-right min-w-[200px]">
+          <div className="flex flex-col items-start md:items-end gap-8 text-left md:text-right min-w-[200px]">
             {/* Social Links */}
             <div className="space-y-4">
               <h4 className="text-xs font-bold uppercase tracking-widest text-white">Follow us on</h4>
@@ -66,7 +66,7 @@ export default function Footer() {
               <h4 className="text-xs font-bold uppercase tracking-widest text-white">{footerData.support.label}</h4>
               <Link
                 href={footerData.support.href}
-                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-secondary hover:border-secondary transition-all hover:-translate-y-1 ml-auto"
+                className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-secondary hover:border-secondary transition-all hover:-translate-y-1 md:ml-auto"
                 aria-label="Contact via WhatsApp"
               >
                 {getIcon(footerData.support.icon)}
@@ -75,10 +75,9 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] md:text-xs text-white/40">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-[10px] md:text-xs text-white/40">
           <p>{footerData.copyright}</p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          <div className="flex flex-wrap justify-start md:justify-center gap-x-6 gap-y-2">
             {footerData.bottomLinks.map((link) => (
               <Link
                 key={link.label}
