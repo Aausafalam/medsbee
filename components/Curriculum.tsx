@@ -47,7 +47,7 @@ export default function Curriculum() {
                   onClick={() =>
                     setExpandedId(expandedId === module.id ? null : module.id)
                   }
-                  className="w-full px-5 md:px-6 py-4 flex items-center justify-between text-left group"
+                  className="w-full cursor-pointer px-5 md:px-6 py-4 flex items-center justify-between text-left group"
                   aria-expanded={expandedId === module.id}
                 >
                   <span className={`text-base md:text-lg font-semibold md:font-bold transition-colors ${expandedId === module.id ? 'text-primary' : 'text-gray-700'

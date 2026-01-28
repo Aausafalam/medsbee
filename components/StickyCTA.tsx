@@ -25,6 +25,7 @@ export default function StickyCTA() {
 
     return (
         <div className="fixed bottom-6 max-w-fit left-1/2 -translate-x-1/2 z-[100] w-full  animate-in fade-in slide-in-from-bottom-4 duration-500">
+            <p className="text-white text-center text-[0.65rem] md:text-[0.8rem] font-semibold bg-[#0a192f] p-2 md:p-2.5 w-fit m-auto relative top-[5px] rounded-t-md">The Money Lessons MBBS Never Taught You</p>
             <div className="bg-[#0a192f] max-w-fit rounded-full p-2 md:p-2.5 flex items-center justify-between shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-white/5 backdrop-blur-sm">
                 {/* Play Video Action */}
                 <button

@@ -5,7 +5,7 @@ import { faqData } from "@/data/faq";
 import { ChevronDown } from "lucide-react";
 
 export default function FAQ() {
-    const [expandedId, setExpandedId] = useState<number | null>(null);
+    const [expandedId, setExpandedId] = useState<number | null>(1);
 
     return (
         <section id="faqs" className="py-10 md:py-14 bg-white overflow-hidden">
@@ -26,7 +26,7 @@ export default function FAQ() {
                         >
                             <button
                                 onClick={() => setExpandedId(expandedId === faq.id ? null : faq.id)}
-                                className={`w-full px-5 md:px-6 py-4 flex items-center justify-between font-semibold md:font-bold text-base md:text-lg transition-all ${expandedId === faq.id ? "bg-blue-50 text-primary" : "bg-white text-primary hover:bg-gray-50"
+                                className={`w-full cursor-pointer px-5 md:px-6 py-4 flex items-center justify-between font-semibold md:font-bold text-base md:text-lg transition-all ${expandedId === faq.id ? "bg-blue-50 text-primary" : "bg-white text-primary hover:bg-gray-50"
                                     }`}
                                 aria-expanded={expandedId === faq.id}
                             >

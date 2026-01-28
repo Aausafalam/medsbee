@@ -8,37 +8,32 @@ export const curriculumData = {
   modules: [
     {
       id: 1,
-      title: 'Understanding Money',
-      description:
-        'Identify common money mistakes and how to avoid them. Explore the different sources of income and learn how a basic monetization chart can help you track your cash flow.',
+      title: 'Module 1: The Doctor Money Reset',
+      description: 'Get absolute clarity on your income, expenses, debt, insurance, and investments all in one place. Uncover hidden leaks, wrong products, and blind spots before making any financial decisions.',
       isExpanded: true,
     },
     {
       id: 2,
-      title: 'Generating Income',
-      description:
-        'Learn multiple streams of income for doctors and healthcare professionals. From active to passive income sources...',
+      title: 'Module 2: Building the Foundation (Before You Invest)',
+      description: 'Create a stress-proof emergency fund and bring discipline to your monthly cashflow. Learn how to choose the right term insurance and professional indemnity without overpaying or overbuying.',
       isExpanded: false,
     },
     {
       id: 3,
-      title: 'Managing your Money',
-      description:
-        'Master the art of budgeting, expense tracking, and smart financial planning tailored for medical professionals...',
+      title: 'Module 3: The Investment Engine',
+      description: 'Build long-term wealth using mutual funds and smart asset allocation without stock-market anxiety. Understand what to invest in, what to avoid, and why doctors must invest differently from others.',
       isExpanded: false,
     },
     {
       id: 4,
-      title: 'Start Saving',
-      description:
-        'Build a comprehensive savings strategy including emergency funds, retirement planning, and investment allocation...',
+      title: 'Module 4: Debt, Credit Cards & Automation',
+      description: 'Master EMIs, loans, and credit cards using clear, doctor-friendly frameworks. Discover the best credit cards and practical hacks to maximise rewards, savings, and cashflow.',
       isExpanded: false,
     },
     {
       id: 5,
-      title: 'Managing your Money',
-      description:
-        'Advanced wealth management techniques including tax optimization, insurance planning, and estate planning for doctors...',
+      title: 'Module 5: Goal-Based Planning & Model Portfolios',
+      description: 'Convert learning into action with age-based goals and ready-to-use model portfolios. Build goal-specific investments, optimise asset allocation by life stage, and design a solid retirement plan.',
       isExpanded: false,
     },
   ],

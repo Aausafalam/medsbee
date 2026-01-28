@@ -1,33 +1,23 @@
 export const footerData = {
-  logo: 'MedkitPro',
+  logo: 'MedsBee',
   description:
-    'Empowering doctors and healthcare professionals to build wealth and financial security.',
-  sections: [
-    {
-      title: 'Our Program',
-      links: [
-        { label: 'Curriculum', href: '#curriculum' },
-        { label: 'Roadmap', href: '#roadmap' },
-        { label: 'Features', href: '#features' },
-        { label: 'Pricing', href: '#pricing' },
-        { label: 'FAQs', href: '#faqs' },
-      ],
-    },
-    {
-      title: 'Legal',
-      links: [
-        { label: 'Privacy Policy', href: '/privacy' },
-        { label: 'Terms of Service', href: '/terms' },
-        { label: 'Cookie Policy', href: '/cookies' },
-        { label: 'Disclaimer', href: '/disclaimer' },
-      ],
-    },
-  ],
+    'Super practical courses, with a no-nonsense approach, that are designed to help you take life decisions from a point of awareness, and not ignorance.',
   social: [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
     { name: 'LinkedIn', href: '#', icon: 'linkedin' },
     { name: 'YouTube', href: '#', icon: 'youtube' },
+    { name: 'Instagram', href: '#', icon: 'instagram' },
   ],
-  copyright: '© 2026 Medsbee. All rights reserved.',
+  support: {
+    label: 'For support',
+    icon: 'whatsapp',
+    href: 'https://wa.me/yournumber',
+  },
+  bottomLinks: [
+    { label: 'Privacy Policy', href: '/privacy' },
+    { label: 'Terms of Use', href: '/terms' },
+    { label: 'Contact Us', href: '/contact' },
+    { label: 'Blogs', href: '/blogs' },
+    { label: 'Refund Policy', href: '/refund' },
+  ],
+  copyright: '© Copyright 2026',
 }
