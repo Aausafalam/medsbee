@@ -9,11 +9,13 @@ export default function Hero() {
         <section className="relative bg-[#0a192f] text-white  overflow-hidden min-h-[65vh]  flex items-center">
             {/* Enhanced Background with subtle swirling lines and glows */}
             <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                <div
-                    className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
-                    style={{ backgroundImage: "url('/hero-bg 1.png')" }}
-                    aria-hidden="true"
-                ></div>
+                <Image
+                    src="/hero-bg 1.png"
+                    alt="Hero Background"
+                    fill
+                    className="opacity-20 object-cover object-center transition-opacity duration-1000"
+                    priority
+                />
                 {/* Subtle Glows */}
                 <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full animate-pulse-slow"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-yellow-500/5 blur-[100px] rounded-full animate-pulse-slow delayer-2000"></div>
