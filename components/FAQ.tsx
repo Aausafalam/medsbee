@@ -13,7 +13,7 @@ export default function FAQ() {
                 {/* Section Header */}
                 <div className="text-center mb-10 md:mb-12">
                     <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest">{faqData.title}</p>
-                    <h2 className="text-2xl md:text-5xl font-bold text-primary leading-tight">Frequently Asked Questions</h2>
+                    <h2 className="text-2xl md:text-4xl font-bold text-primary leading-tight">Frequently Asked Questions</h2>
                 </div>
 
                 {/* FAQ Accordion */}

@@ -8,8 +8,8 @@ export default function TermsOfService() {
     return (
         <div className="min-h-screen bg-white">
             <Header />
-            <main className="py-20 md:py-32">
-                <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <main className="py-16">
+                <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
                     <Link
                         href="/"
                         className="inline-flex items-center gap-2 text-primary font-bold mb-12 hover:text-blue-600 transition-colors"

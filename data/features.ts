@@ -1,48 +1,42 @@
 export const featuresData = {
-  title: "The goal isn't to know finance,",
-  highlightedText: 'it is to feel in control',
+  title: "TRANSFORMATION",
+  subtitle: "What You’ll Achieve After This Course",
   features: [
     {
       id: 1,
-      title: 'What is do-first',
-      description:
-        'A framework for success that guides you to your financial goal. Applicable to anyone, Anywhere',
-      icon: 'Target',
+      title: 'Confident in Mutual funds selection',
+      description: 'Master the art of picking the right funds for consistent long-term growth.',
+      icon: 'TrendingUp',
     },
     {
       id: 2,
-      title: 'A stress-proof wealth plan',
-      description:
-        'Build a wealth plan that survives economic crises and market downturns, Regardless of external conditions',
-      icon: 'Shield',
+      title: 'Avoid ₹1Cr+ Insurance Mistakes',
+      description: 'Learn to identify and avoid expensive insurance traps and mis-selling.',
+      icon: 'ShieldCheck',
     },
     {
       id: 3,
-      title: 'Connect insurance and wealth',
-      description:
-        'Understand how insurance is part of your wealth plan and create the right protective umbrella',
-      icon: 'HeartPulse',
+      title: 'Save ₹2–3L Annually via Credit Cards',
+      description: 'Optimize your spending and maximize rewards to save lakhs every year.',
+      icon: 'CreditCard',
     },
     {
       id: 4,
-      title: 'An investing framework you trust',
-      description:
-        'Learn to invest systematically in markets, Properties, and other instruments to grow your wealth exponentially',
-      icon: 'LineChart',
+      title: 'Build Investing Foundation',
+      description: 'Create a solid base for wealth creation with time-tested investing principles.',
+      icon: 'Building2',
     },
     {
       id: 5,
-      title: 'A crash-based portfolio plan',
-      description:
-        'Design a portfolio that matches your needs, risk profile, and long-term financial goals',
-      icon: 'Briefcase',
+      title: 'Age Wise Money Planning',
+      description: 'Tailored financial strategies for every stage of your life and career.',
+      icon: 'Calendar',
     },
     {
       id: 6,
-      title: 'A plan to become tax efficient',
-      description:
-        'Optimize your income tax, Learn about business deductions, and Save hundreds of thousands of rupees',
-      icon: 'Receipt',
+      title: '5Cr+ Retirement Corpus',
+      description: 'Simple, actionable steps to build a multi-crore corpus for a stress-free retirement.',
+      icon: 'PiggyBank',
     },
   ],
 }

@@ -8,11 +8,10 @@ export default function Features() {
         <section id="features" className="py-10 md:py-16 bg-gray-50 overflow-hidden">
             <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-10 md:mb-14">
-                    <h2 className="text-2xl md:text-5xl font-bold text-primary leading-tight">
-                        {featuresData.title}
-                        <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-700 to-primary italic">{featuresData.highlightedText}</span>
+                <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
+                    <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest">{featuresData.title}</p>
+                    <h2 className="text-2xl md:text-4xl font-bold text-primary leading-tight">
+                        {featuresData.subtitle}
                     </h2>
                 </div>
 

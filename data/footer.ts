@@ -16,8 +16,8 @@ export const footerData = {
     { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Terms of Use', href: '/terms' },
     { label: 'Contact Us', href: '/contact' },
-    { label: 'Blogs', href: '/blogs' },
-    { label: 'Refund Policy', href: '/refund' },
+    // { label: 'Blogs', href: '/blogs' },
+    // { label: 'Refund Policy', href: '/refund' },
   ],
   copyright: '© Copyright 2026',
 }

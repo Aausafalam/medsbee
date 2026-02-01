@@ -1,46 +1,41 @@
 export const roadmapData = {
-  title: 'A simple roadmap, built for doctors',
-  subtitle: 'so you stop guessing and start executing.',
-  image: {
-    src: '/roadmap_medical_financial.png',
-    alt: 'Doctor reviewing roadmap',
-  },
-  features: [
-    {
-      id: 1,
-      title: 'Time scarcity',
-      description: 'No time to manage finances with your busy schedule.',
-      icon: 'Clock',
+    title: "A simple roadmap, built for doctors",
+    subtitle: "Struggling With These Money Decisions as a Doctor?",
+    image: {
+        src: "/roadmap_medical_financial.png",
+        alt: "Doctor reviewing roadmap",
     },
-    {
-      id: 2,
-      title: 'No roadmap',
-      description: 'Without a direction, you navigate in the wrong direction.',
-      icon: 'Map',
-    },
-    {
-      id: 3,
-      title: 'Confusion & inaction',
-      description: 'Who do you follow and how to move forward? Analysis paralysis.',
-      icon: 'HelpCircle',
-    },
-    {
-      id: 4,
-      title: 'Financial Management',
-      description: 'Do not care enough about it. Better to earn more than save.',
-      icon: 'DollarSign',
-    },
-    {
-      id: 5,
-      title: 'Risk of Crisis',
-      description: 'Temporary financial crisis can break even a high income earner.',
-      icon: 'AlertTriangle',
-    },
-    {
-      id: 6,
-      title: 'Clear Selection',
-      description: 'Confusion in selecting the right investments for your future.',
-      icon: 'Target',
-    },
-  ],
-}
+    features: [
+        {
+            id: 1,
+            title: "Don’t Know How to Invest",
+            description: "When to start, where to invest, and how much",
+            icon: "TrendingUp",
+        },
+        {
+            id: 2,
+            title: "Confusing Mutual Funds",
+            description: "No clarity on which funds to choose, risk, or returns",
+            icon: "PieChart",
+        },
+        {
+            id: 3,
+            title: "Insurance Without Understanding",
+            description: "Wrong covers, wrong amounts, and poor protection",
+            icon: "ShieldCheck",
+        },
+        {
+            id: 4,
+            title: "No Credit Card Strategy",
+            description: "Using cards without planning",
+            icon: "CreditCard",
+        },
+        {
+            id: 5,
+            title: "Age-Wise Planning",
+            description: "Right financial decisions for every life stage",
+            icon: "Calendar",
+        },
+    ]
+
+};

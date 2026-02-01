@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { socialProofData } from "@/data/socialProof";
-import { Play, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Play, X, ChevronLeft, ChevronRight, Instagram, Twitter } from "lucide-react";
 import "../styles/globals.css";
 
 export default function SocialProof() {
@@ -28,7 +28,7 @@ export default function SocialProof() {
                     <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
                         <div className="max-w-2xl text-center md:text-left">
                             <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest">{socialProofData.title}</p>
-                            <h2 className="text-2xl md:text-5xl font-bold text-primary leading-tight">{socialProofData.titleHighlight}</h2>
+                            <h2 className="text-2xl md:text-4xl font-bold text-primary leading-tight">{socialProofData.titleHighlight}</h2>
                         </div>
 
                         {/* CTA Buttons */}
@@ -73,7 +73,11 @@ export default function SocialProof() {
                                         <div className="absolute inset-x-0 bottom-0 p-5 md:p-6 bg-gradient-to-t from-black/95 via-black/60 to-transparent">
                                             <div className="space-y-1">
                                                 <h3 className="font-bold text-white text-lg md:text-xl leading-tight">{testimonial.name}</h3>
-                                                <p className="text-xs md:text-sm text-blue-200/80 font-medium">{testimonial.handle}</p>
+                                                <div className="flex items-center gap-1.5 text-blue-200/80">
+                                                    {(testimonial as any).platform === 'instagram' && <Instagram size={14} />}
+                                                    {(testimonial as any).platform === 'twitter' && <Twitter size={14} />}
+                                                    <p className="text-xs md:text-sm font-medium">{testimonial.handle}</p>
+                                                </div>
                                                 <p className="text-[10px] md:text-xs text-secondary font-bold uppercase pt-1.5 tracking-wider border-t border-white/10 mt-2">
                                                     {testimonial.followers}
                                                 </p>

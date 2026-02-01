@@ -11,7 +11,7 @@ export default function Roadmap() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
           <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest">{roadmapData.title}</p>
-          <h2 className="text-2xl md:text-5xl font-bold text-primary leading-tight">
+          <h2 className="text-2xl md:text-4xl font-bold text-primary leading-tight">
             {roadmapData.subtitle}
           </h2>
         </div>
@@ -42,7 +42,7 @@ export default function Roadmap() {
                   <div className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center bg-primary/5 rounded-xl md:rounded-2xl mb-2 md:mb-4 transition-all group-hover:bg-primary group-hover:text-white group-hover:scale-110">
                     <IconComponent className="w-4.5 h-4.5 md:w-6 md:h-6" strokeWidth={2.5} />
                   </div>
-                  <h3 className="font-semibold md:font-bold text-primary mb-2 text-lg md:text-xl leading-tight">
+                  <h3 className="font-semibold md:font-bold text-primary mb-2 text-lg md:text-lg leading-tight">
                     {feature.title}
                   </h3>
                   <p className="text-sm text-gray-500 leading-relaxed font-medium">

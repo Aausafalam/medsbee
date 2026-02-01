@@ -9,13 +9,7 @@ export default function Hero() {
         <section className="relative bg-[#0a192f] text-white  overflow-hidden min-h-[65vh]  flex items-center">
             {/* Enhanced Background with subtle swirling lines and glows */}
             <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                <Image
-                    src="/hero-bg 1.png"
-                    alt="Hero Background"
-                    fill
-                    className="opacity-20 object-cover object-center transition-opacity duration-1000"
-                    priority
-                />
+                <Image src="/hero-bg 1.png" alt="Hero Background" fill className="opacity-20 object-cover object-center transition-opacity duration-1000" priority />
                 {/* Subtle Glows */}
                 <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full animate-pulse-slow"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-yellow-500/5 blur-[100px] rounded-full animate-pulse-slow delayer-2000"></div>
@@ -61,7 +55,7 @@ export default function Hero() {
                                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[66px] md:font-normal font-semibold leading-[1.1] text-white tracking-tight">
                                     Now Master{" "}
                                     <span className="text-secondary relative">
-                                        Money.
+                                        Money
                                         {/* SVG Swoosh Underline */}
                                         <svg
                                             className="absolute -bottom-2 md:-bottom-4 left-0 w-full h-3 md:h-6 text-secondary transform translate-y-1"

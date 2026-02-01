@@ -11,7 +11,7 @@ export default function SneakPeek() {
                     <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest">
                         {sneakPeekData.title}
                     </p>
-                    <h2 className="text-2xl md:text-5xl font-bold text-primary leading-tight">
+                    <h2 className="text-2xl md:text-4xl font-bold text-primary leading-tight">
                         {sneakPeekData.subtitle}
                     </h2>
                 </div>

@@ -14,7 +14,7 @@ export default function Curriculum() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
           <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest">{curriculumData.title}</p>
-          <h2 className="text-2xl md:text-5xl font-bold text-primary leading-tight">
+          <h2 className="text-2xl md:text-4xl font-bold text-primary leading-tight">
             Self-placed modules, watch anytime.
           </h2>
         </div>

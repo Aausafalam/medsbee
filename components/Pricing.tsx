@@ -46,8 +46,8 @@ export default function Pricing() {
             <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto ">
-                    <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest leading-none">Choose the</p>
-                    <h2 className="text-2xl md:text-4xl font-bold text-primary leading-tight">Plan that Fits You Best</h2>
+                    <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest leading-none">{pricingData.title}</p>
+                    <h2 className="text-2xl md:text-4xl font-bold text-primary leading-tight">{pricingData.subtitle}</h2>
                 </div>
 
                 {/* Pricing Cards Container */}
@@ -59,9 +59,8 @@ export default function Pricing() {
                         {[...pricingData.plans].reverse().map((plan, index) => (
                             <div
                                 key={plan.id}
-                                className={`flex-shrink-0 w-[85vw] sm:w-[350px] py-2 md:py-3  md:w-auto snap-center relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden transition-all duration-500 flex flex-col h-auto shadow-lg hover:shadow-xl ${
-                                    plan.isFeatured ? "bg-[#002B5B] text-white ring-2 ring-secondary/30 z-10" : "bg-white text-primary border border-blue-100/50"
-                                } ${plan.id === 1 ? "md:order-1" : plan.id === 2 ? "md:order-2" : "md:order-3"}`}
+                                className={`flex-shrink-0 w-[85vw] sm:w-[350px] py-2 md:py-3  md:w-auto snap-center relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden transition-all duration-500 flex flex-col h-auto shadow-lg hover:shadow-xl ${plan.isFeatured ? "bg-[#002B5B] text-white ring-2 ring-secondary/30 z-10" : "bg-white text-primary border border-blue-100/50"
+                                    } ${plan.id === 1 ? "md:order-1" : plan.id === 2 ? "md:order-2" : "md:order-3"}`}
                             >
                                 {/* Star Badge */}
                                 <div className="absolute top-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-0.5">
@@ -96,9 +95,8 @@ export default function Pricing() {
                                                     {feature.included ? <Check size={16} strokeWidth={3} /> : <X size={16} strokeWidth={3} />}
                                                 </div>
                                                 <span
-                                                    className={`text-[13px] md:text-sm leading-tight font-medium ${
-                                                        plan.isFeatured ? "text-white" : "text-gray-700"
-                                                    } ${!feature.included ? "line-through grayscale" : ""}`}
+                                                    className={`text-[13px] md:text-sm leading-tight font-medium ${plan.isFeatured ? "text-white" : "text-gray-700"
+                                                        } ${!feature.included ? "line-through grayscale" : ""}`}
                                                 >
                                                     {feature.text}
                                                 </span>
@@ -110,11 +108,10 @@ export default function Pricing() {
                                     <div className="space-y-3 pt-2 mt-auto">
                                         <Link
                                             href={plan.cta.href}
-                                            className={`block text-center py-3 rounded-xl font-bold transition-all text-lg uppercase tracking-wide ${
-                                                plan.isFeatured
-                                                    ? "bg-secondary text-[#002B5B] hover:bg-yellow-400 shadow-[0_5px_15px_rgba(255,215,0,0.3)]"
-                                                    : "bg-[#002B5B] text-white hover:bg-[#002B5B]/80"
-                                            }`}
+                                            className={`block text-center py-3 rounded-xl font-bold transition-all text-lg uppercase tracking-wide ${plan.isFeatured
+                                                ? "bg-secondary text-[#002B5B] hover:bg-yellow-400 shadow-[0_5px_15px_rgba(255,215,0,0.3)]"
+                                                : "bg-[#002B5B] text-white hover:bg-[#002B5B]/80"
+                                                }`}
                                         >
                                             <span className="relative z-10">{plan.cta.label}</span>
                                         </Link>
