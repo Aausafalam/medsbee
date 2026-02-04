@@ -10,8 +10,8 @@ export const pricingData = {
       description: 'For individuals just starting their financial journey',
       features: [
         { text: 'Pre-recorded Video Lectures', included: true },
-        { text: '12 Live Group Q&A Sessions', included: false },
-        { text: 'Assignments & Evaluation Guide', included: false },
+        { text: '6+ Live Group Q&A Sessions', included: false },
+        { text: 'Evaluation guide and Tools', included: false },
         { text: 'Downloadable PDF Course Notes', included: false },
         { text: 'Course Virtual Community', included: false },
         { text: 'Lifetime access to WhatsApp Community', included: false },
@@ -48,7 +48,7 @@ export const pricingData = {
       id: 3,
       name: 'Community Access Plan',
       price: '₹1999',
-      originalPrice: '₹3999',
+      originalPrice: '₹2999',
       description: 'Premium experience with WhatsApp community and more live sessions',
       features: [
         { text: 'Pre-recorded Video Lectures', included: true },

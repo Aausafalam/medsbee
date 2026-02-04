@@ -166,13 +166,13 @@ export default function PrivacyPolicy() {
                             </div>
 
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                <div className="p-6 rounded-2xl bg-gray-900 text-white space-y-4">
-                                    <h3 className="text-sm font-black italic text-secondary tracking-tight uppercase">Cross-Border Data Transfer</h3>
-                                    <p className="text-gray-300 text-xs leading-relaxed">
+                                <div className="p-6 rounded-2xl border border-gray-100 space-y-4">
+                                    <h3 className="text-sm font-black text-primary tracking-tight uppercase">Cross-Border Data Transfer</h3>
+                                    <p className="text-gray-500 text-xs leading-relaxed">
                                         Your information is stored and processed in India on Amazon Web Service (AWS) servers. If you use our Platform from the USA, EU, EEA, or UK, you consent to this transfer.
                                     </p>
                                 </div>
-                                <div className="p-6 rounded-2xl bg-gray-50 border border-gray-100 space-y-4">
+                                <div className="p-6 rounded-2xl border border-gray-100 space-y-4">
                                     <h3 className="text-sm font-black text-primary tracking-tight uppercase">Storage Duration</h3>
                                     <p className="text-gray-500 text-xs leading-relaxed">
                                         We retain information for as long as required for legal or business compliances. We take all measures reasonably necessary to protect against unauthorized access.
@@ -188,17 +188,17 @@ export default function PrivacyPolicy() {
                                 <h2 className="text-xl md:text-2xl font-black text-primary tracking-tight uppercase">Grievances</h2>
                             </div>
 
-                            <div className="p-8 rounded-2xl bg-secondary text-primary text-center space-y-4">
-                                <h3 className="text-2xl font-black tracking-tight">Have Questions?</h3>
-                                <p className="font-bold max-w-md mx-auto text-sm">
-                                    If you wish to exercise your rights, or have concerns about privacy, please write to us with a thorough description.
+                            <div className="p-8 rounded-2xl border border-gray-100 text-primary text-center space-y-4">
+                                <h3 className="text-2xl font-black tracking-tight uppercase italic">Have Questions?</h3>
+                                <p className="font-bold max-w-lg mx-auto text-sm text-gray-500">
+                                    If you wish to exercise your rights, or have concerns about privacy, please write to us with a thorough description of your concern.
                                 </p>
-                                <div className="pt-2">
+                                <div className="pt-4">
                                     <Link
-                                        href="mailto:medsbee@gmail.com"
-                                        className="inline-block bg-primary text-white px-8 py-3 rounded-full font-black hover:scale-105 transition-transform shadow-lg text-sm"
+                                        href="mailto:contact@medsbee.com"
+                                        className="inline-block bg-primary text-white px-10 py-4 rounded-full font-black hover:scale-105 transition-transform shadow-xl text-sm uppercase tracking-widest"
                                     >
-                                        medsbee@gmail.com
+                                        contact@medsbee.com
                                     </Link>
                                 </div>
                             </div>

@@ -51,7 +51,7 @@ export default function Pricing() {
                 </div>
 
                 {/* Pricing Cards Container */}
-                <div className="relative max-w-7xl mx-auto px-0 md:px-10">
+                <div className="relative max-w-[1400px] mx-auto px-0 md:px-10">
                     <div
                         ref={scrollContainerRef}
                         className="flex md:grid md:grid-cols-3 gap-2 md:gap-4 px-1 lg:gap-8 overflow-x-auto py-6 md:py-8 snap-x snap-mandatory no-scrollbar pb-6 md:pb-8 items-stretch"
@@ -59,7 +59,9 @@ export default function Pricing() {
                         {[...pricingData.plans].reverse().map((plan, index) => (
                             <div
                                 key={plan.id}
-                                className={`flex-shrink-0 w-[85vw] sm:w-[350px] py-2 md:py-3  md:w-auto snap-center relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden transition-all duration-500 flex flex-col h-auto shadow-lg hover:shadow-xl ${plan.isFeatured ? "bg-[#002B5B] text-white ring-2 ring-secondary/30 z-10" : "bg-white text-primary border border-blue-100/50"
+                                className={`flex-shrink-0 w-[85vw] sm:w-[350px] py-2 md:py-3 md:w-auto snap-center relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden transition-all duration-500 flex flex-col h-auto shadow-lg hover:shadow-xl hover:scale-[1.02] hover:z-20 ${plan.isFeatured
+                                    ? "bg-[#002B5B] text-white ring-2 ring-secondary/30 z-10 hover:shadow-[0_20px_50px_rgba(255,215,0,0.4)]"
+                                    : "bg-white text-primary border border-blue-100/50 hover:shadow-[0_20px_40px_rgba(0,43,91,0.2)]"
                                     } ${plan.id === 1 ? "md:order-1" : plan.id === 2 ? "md:order-2" : "md:order-3"}`}
                             >
                                 {/* Star Badge */}

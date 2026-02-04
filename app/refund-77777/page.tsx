@@ -106,10 +106,10 @@ export default function RefundPolicy() {
                                     WhatsApp Support
                                 </Link>
                                 <Link
-                                    href="mailto:medsbee@gmail.com"
+                                    href="mailto:contact@medsbee.com"
                                     className="flex items-center gap-3 bg-white text-primary border-2 border-primary/10 px-8 py-3 rounded-full font-black hover:bg-gray-50 transition-all text-sm"
                                 >
-                                    medsbee@gmail.com
+                                    contact@medsbee.com
                                 </Link>
                             </div>
                         </section>

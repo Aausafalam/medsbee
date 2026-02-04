@@ -21,7 +21,7 @@ export const curriculumData = {
     {
       id: 3,
       title: 'Module 3: The Investment Engine',
-      description: 'Build long-term wealth using mutual funds and smart asset allocation without stock-market anxiety. Understand what to invest in, what to avoid, and why doctors must invest differently from others.',
+      description: 'Build long-term wealth using mutual funds and smart asset allocation without stock-market anxiety. Understand what to avoid,how to compare and select the right mutual fund and why doctors must invest differently from others.',
       isExpanded: false,
     },
     {
