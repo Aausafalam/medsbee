@@ -17,19 +17,18 @@ export default function Instructor() {
                             <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">Karan Chawla</h2>
                         </div>
 
-                        <p className="text-base md:text-lg text-white/80 font-medium max-w-lg leading-relaxed">
-                            Through close work with doctors, he identified a widespread lack of financial clarity. His focus is helping doctors simplify investing, manage debt, and build structured
-                            systems for long-term wealth.
+                        <p className="text-sm md:text-lg text-white/80 font-medium max-w-xxl leading-relaxed">
+                            Through working closely with doctors, including family members, colleagues, and peers, he recognised that many medical professionals struggle with financial clarity despite professional success. His work focuses on helping doctors simplify investments, manage debt effectively, and build structured financial systems that allow them to grow long-term wealth alongside demanding medical careers.
                         </p>
 
                         <div className="space-y-1">
-                            <div className="text-5xl md:text-6xl font-bold text-secondary leading-none">75K +</div>
+                            <div className="text-5xl md:text-6xl font-bold text-secondary leading-none">80K +</div>
                             <p className="text-sm md:text-base text-white/70 font-medium tracking-wide">Doctor Community for Financial Clarity</p>
                         </div>
                     </div>
 
                     {/* Right Content (Image) */}
-                    <div className="relative h-[250px] md:h-[400px] lg:h-[450px]">
+                    <div className="relative h-[250px] md:h-[400px] lg:h-[510px]">
                         <div className="relative w-full h-full flex items-end justify-center lg:justify-end">
                             <Image src="/krn 1.png" alt="Karan Chawla" fill className="object-contain object-bottom drop-shadow-[0_15px_40px_rgba(255,215,0,0.15)]" priority />
                         </div>

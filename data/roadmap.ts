@@ -1,6 +1,6 @@
 export const roadmapData = {
     title: "A simple roadmap, built for doctors",
-    subtitle: "Struggling With These Money Decisions as a Doctor?",
+    subtitle: "Struggling With These Money Decisions As A Doctor?",
     image: {
         src: "/roadmap_medical_financial.png",
         alt: "Doctor reviewing roadmap",
@@ -8,32 +8,32 @@ export const roadmapData = {
     features: [
         {
             id: 1,
-            title: "Don’t Know How to Invest",
-            description: "When to start, where to invest, and how much",
+            title: "Unsure How to Start Investing",
+            description: "When to begin, where to invest, and how much feels unclear",
             icon: "TrendingUp",
         },
         {
             id: 2,
-            title: "Confusing Mutual Funds",
-            description: "No clarity on which funds to choose, risk, or returns",
+            title: "Selecting the Right Mutual Funds",
+            description: "Too many funds, unclear risks, No clarity on how to choose",
             icon: "PieChart",
         },
         {
             id: 3,
-            title: "Insurance Without Understanding",
+            title: "Choosing the Right Insurance",
             description: "Wrong covers, wrong amounts, and poor protection",
             icon: "ShieldCheck",
         },
         {
             id: 4,
-            title: "No Credit Card Strategy",
-            description: "Using cards without planning",
+            title: "Earning Rewards with Credit Cards",
+            description: "Spending without knowing how to optimise or avoid mistakes",
             icon: "CreditCard",
         },
         {
             id: 5,
-            title: "Age-Wise Planning",
-            description: "Right financial decisions for every life stage",
+            title: "No Clear Age-Wise Financial Plan",
+            description: "Uncertain if current decisions match your life stage",
             icon: "Calendar",
         },
     ]

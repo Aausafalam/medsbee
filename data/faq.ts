@@ -35,7 +35,7 @@ export const faqData = {
     {
       id: 6,
       question: 'Does the course come with any live interaction?',
-      answer: 'Yes—depending on your plan: Basic: No live sessions | Standard: 1 Live Group Q&A | Premium: 12+ Live/ Group Q&A or specific topics discussions + WhatsApp community access',
+      answer: 'Yes—depending on your plan: Basic: No live sessions | Standard: 1 Live Group Q&A | Premium: 6+ Live/ Group Q&A or specific topics discussions + WhatsApp community access',
       isExpanded: false,
     },
     {

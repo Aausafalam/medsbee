@@ -1,6 +1,6 @@
 export const pricingData = {
     title: "Choose the ",
-    subtitle: "Plan that Fits You Best",
+    subtitle: "Plan That Fits You Best",
     plans: [
         {
             id: 1,

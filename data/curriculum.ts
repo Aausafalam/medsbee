@@ -1,6 +1,6 @@
 export const curriculumData = {
     title: "Course Curriculum",
-    subtitle: "Self Paced Modules, Watch Anytime.",
+    subtitle: "Self Paced Modules, Watch Anytime",
     image: {
         src: "/curriculum_wealth_learning.png",
         alt: "Professional learning environment illustration",

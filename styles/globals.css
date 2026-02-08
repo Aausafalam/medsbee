@@ -160,8 +160,10 @@
 .shorts-container {
     position: relative;
     width: 100%;
-    max-width: 360px; /* mobile Shorts width */
-    aspect-ratio: 9 / 16; /* 👈 makes it vertical */
+    max-width: 360px;
+    /* mobile Shorts width */
+    aspect-ratio: 9 / 16;
+    /* 👈 makes it vertical */
     margin: auto;
 }
 
