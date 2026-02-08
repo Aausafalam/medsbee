@@ -85,8 +85,8 @@ export default function SocialProof() {
                                         </div>
 
                                         {/* Play Icon Overlay (Center) */}
-                                        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 bg-primary/20 backdrop-blur-[2px]">
-                                            <div className="w-14 h-14 md:w-16 md:h-16 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/40 shadow-2xl scale-90 group-hover:scale-100 transition-transform duration-500">
+                                        <div className="absolute inset-0 flex items-center justify-center md:opacity-0 group-hover:opacity-100 transition-all duration-500 md:bg-primary/20 md:backdrop-blur-[2px]">
+                                            <div className="w-14 h-14 md:w-16 md:h-16 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/40 shadow-2xl scale-100 md:scale-90 group-hover:scale-100 transition-transform duration-500">
                                                 <Play size={24} className="text-white fill-white ml-1 md:ml-1.5" />
                                             </div>
                                         </div>
