@@ -11,13 +11,13 @@ export const featuresData = {
         {
             id: 2,
             title: "Avoid Costly Insurance Mistakes",
-            description: "Buy the right health & term insurance once and avoid mistakes that can cost lakhs later.",
+            description: "Buy the right health, term and indemnity insurance once and avoid mistakes that can cost lakhs later.",
             icon: "ShieldCheck",
         },
         {
             id: 3,
             title: "Plan Your Money by Age & Career Stage",
-            description: "Clear guidance on what to focus on in your 20s, 30s, and beyond no confusion.",
+            description: "Clear guidance on what to focus on in your 20s, 30s, and beyond - no confusion.",
             icon: "UserCheck",
         },
         {

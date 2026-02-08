@@ -60,15 +60,15 @@ export default function Curriculum() {
                         </div>
 
                         {/* View Complete Curriculum Button */}
-                        <div className="pt-0">
+                        <div className="flex justify-center">
                             <a
                                 href={(curriculumData as any).fullCurriculumHref}
-                                className="inline-flex items-center gap-2 text-primary font-bold group no-underline"
+                                className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary border-2 border-primary/10 text-white font-bold text-white transition-all duration-300 shadow-sm hover:shadow-md group"
                             >
-                                <span className="text-base md:text-lg font-semibold transition-all border-b-2 border-transparent group-hover:border-primary pb-px">
+                                <span className="text-base font-bold">
                                     {(curriculumData as any).fullCurriculumLabel}
                                 </span>
-                                <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
+                                <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-1" />
                             </a>
                         </div>
                     </div>

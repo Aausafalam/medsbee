@@ -47,7 +47,7 @@ export const faqData = {
     {
       id: 9,
       question: 'What is the community experience in the course?',
-      answer: 'The WhatsApp community (Premium only) is for: Accountability and implementation nudges, Common FAQs and clarifications, Updates, new resources, and course upgrades, Peer learning (doctors at different stages). No spam. Strict modteration.',
+      answer: 'The WhatsApp community (Premium only) is for: Accountability and implementation nudges, Common FAQs and clarifications, Updates, new resources, and course upgrades, Peer learning (doctors at different stages). No spam. Strict moderation.',
       isExpanded: false,
     },
     {

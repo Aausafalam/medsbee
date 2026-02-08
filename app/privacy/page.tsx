@@ -3,203 +3,204 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { ChevronLeft, Info, User, Database, Share2, ShieldCheck, Lock, HelpCircle } from 'lucide-react'
 
 export default function PrivacyPolicy() {
     return (
-        <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-secondary/30">
+        <div className="min-h-screen bg-[#F8FAFC] font-sans text-slate-900 selection:bg-secondary/30">
             <Header />
-            <main className="py-12">
+            <main className="pt-12 pb-24">
                 <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
-                    {/* Breadcrumb / Back */}
-                    <div className="mb-8">
+                    {/* Back Link */}
+                    <div className="mb-10">
                         <Link
                             href="/"
-                            className="inline-flex items-center gap-2 text-primary font-bold hover:text-blue-600 transition-colors text-xs group"
+                            className="inline-flex items-center gap-2 text-primary/60 hover:text-primary font-semibold transition-colors text-sm group"
                         >
-                            <div className="flex items-center justify-center w-7 h-7 rounded-full bg-gray-50 group-hover:bg-primary/5 transition-colors">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M19 12H5m7-7-7 7 7 7" />
-                                </svg>
-                            </div>
+                            <ChevronLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
                             Back to Home
                         </Link>
                     </div>
 
-                    <header className="mb-10 border-b border-gray-100 pb-8">
-                        <h1 className="text-3xl md:text-5xl font-black text-primary mb-4 tracking-tight leading-none uppercase">Privacy Policy</h1>
-                        <p className="text-xs md:text-sm text-gray-400 font-bold uppercase tracking-[0.2em] flex items-center gap-3">
-                            <span className="w-10 h-0.5 bg-secondary"></span>
+                    <header className="mb-12">
+                        <h1 className="text-4xl md:text-5xl font-extrabold text-primary mb-4 tracking-tight">Privacy Policy</h1>
+                        <p className="text-slate-500 font-medium tracking-wide">
                             Last Updated: February 2025
                         </p>
                     </header>
 
-                    <div className="space-y-12 text-gray-700 leading-relaxed md:text-base">
+                    <div className="space-y-6">
                         {/* Introduction */}
-                        <section className="space-y-4">
-                            <p className="font-semibold text-lg text-gray-900 leading-snug">
-                                This Privacy Policy (the “Policy”) governs the manner in which the Platform collects, uses, maintains and discloses information of its users.
-                            </p>
-                            <p className="text-gray-600 text-sm md:text-base">
-                                The Policy also describes the practices that We apply to such user information, user’s privacy rights and choices regarding their information. To clarify, this Policy applies to all users of the Platform (referred to as “Learners”, “You”, “Your”).
-                            </p>
-                            <p className="text-gray-600 text-sm md:text-base">
-                                By accessing and using the Platform, providing Your Personal Information, or by otherwise signalling Your agreement when the option is presented to You, You consent to the collection, use, and disclosure of information described in this Policy and Terms of Use and we disclaim all the liabilities arising therefrom.
-                            </p>
-                        </section>
-
-                        {/* 1. PERSONAL INFORMATION */}
-                        <section id="personal-information" className="space-y-6 group">
-                            <div className="flex items-center gap-3">
-                                <span className="text-[10px] font-black bg-primary text-white w-6 h-6 flex items-center justify-center rounded-md">01</span>
-                                <h2 className="text-xl md:text-2xl font-black text-primary tracking-tight uppercase">Personal Information</h2>
-                            </div>
-
-                            <div className="space-y-4">
-                                <div className="p-5 rounded-xl bg-gray-50 border border-gray-100 space-y-3">
-                                    <p className="text-sm md:text-base">
-                                        <strong className="text-primary font-bold">Personal Information:</strong> shall mean the information which identifies a Learner i.e., first and last name, identification number, email address, age, gender, location, photograph and/or phone number provided at the time of registration or any time thereafter on the Platform.
-                                    </p>
-                                    <p className="text-sm md:text-base">
-                                        <strong className="text-primary font-bold">Sensitive Personal Information:</strong> shall include (i) passwords and financial data, (ii) health data, (iii) official identifiers (Aadhar, passport, etc.), (iv) biometric data, or (v) other data categorized as ‘sensitive’ under the Digital Personal Data Protection Act, 2023 (DPDPA), GDPR, and CCPA.
-                                    </p>
+                        <section className="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                            <div className="flex flex-col md:flex-row gap-6">
+                                <div className="flex-shrink-0">
+                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                        <Info className="w-6 h-6" />
+                                    </div>
+                                </div>
+                                <div className="space-y-4">
+                                    <h2 className="text-2xl font-bold text-slate-900">About This Policy</h2>
+                                    <div className="text-slate-600 leading-relaxed text-lg space-y-4">
+                                        <p>
+                                            This Privacy Policy (the “Policy”) governs the manner in which the Platform collects, uses, maintains and discloses information of its users.
+                                        </p>
+                                        <p>
+                                            By accessing and using the Platform, providing Your Personal Information, or by otherwise signalling Your agreement when the option is presented to You, You consent to the collection, use, and disclosure of information described in this Policy.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </section>
 
-                        {/* 2. INFORMATION WE COLLECT */}
-                        <section id="information-collection" className="space-y-6">
-                            <div className="flex items-center gap-3">
-                                <span className="text-[10px] font-black bg-primary text-white w-6 h-6 flex items-center justify-center rounded-md">02</span>
-                                <h2 className="text-xl md:text-2xl font-black text-primary tracking-tight uppercase">Information We Collect</h2>
-                            </div>
-
-                            <p className="text-sm md:text-base">We collect information in a variety of ways, including when You visit our Platform, register, and in connection with other activities.</p>
-
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div className="p-6 rounded-2xl bg-white border-2 border-gray-50 hover:border-secondary/30 transition-all space-y-3">
-                                    <h3 className="font-black text-primary uppercase text-[10px] tracking-widest">Personal Identification</h3>
-                                    <p className="text-xs text-gray-500 font-medium">We collect names and email addresses voluntarily submitted by You. You can refuse to provide this, though it may limit your access to some features.</p>
+                        {/* Section 1: Personal Information */}
+                        <section className="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                            <div className="flex flex-col md:flex-row gap-6">
+                                <div className="flex-shrink-0">
+                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                        <User className="w-6 h-6" />
+                                    </div>
                                 </div>
-                                <div className="p-6 rounded-2xl bg-white border-2 border-gray-50 hover:border-secondary/30 transition-all space-y-3">
-                                    <h3 className="font-black text-primary uppercase text-[10px] tracking-widest">Non-Personal Data</h3>
-                                    <p className="text-xs text-gray-500 font-medium">Browser name, language preference, referring site, operating system, and ISP details are collected to optimize performance.</p>
-                                </div>
-                                <div className="p-6 rounded-2xl bg-white border-2 border-gray-50 hover:border-secondary/30 transition-all space-y-3">
-                                    <h3 className="font-black text-primary uppercase text-[10px] tracking-widest">Cookies & Tracking</h3>
-                                    <p className="text-xs text-gray-500 font-medium">A cookie is a string of information that a website stores on a visitor’s computer. We use them for record-keeping and to enhance User experience.</p>
+                                <div className="space-y-4 w-full">
+                                    <h2 className="text-2xl font-bold text-slate-900">Personal Information Definitions</h2>
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                                            <h3 className="font-bold text-primary mb-2">Personal Information</h3>
+                                            <p className="text-slate-600 text-sm">
+                                                Information identifying a Learner: first and last name, identification number, email address, age, gender, location, photograph and/or phone number provided at registration.
+                                            </p>
+                                        </div>
+                                        <div className="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                                            <h3 className="font-bold text-primary mb-2">Sensitive Personal Information</h3>
+                                            <p className="text-slate-600 text-sm">
+                                                Includes passwords, financial data, health data, official identifiers (Aadhar, passport, etc.), and biometric data.
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </section>
 
-                        {/* 3. HOW WE USE AND SHARE */}
-                        <section id="usage" className="space-y-6">
-                            <div className="flex items-center gap-3">
-                                <span className="text-[10px] font-black bg-primary text-white w-6 h-6 flex items-center justify-center rounded-md">03</span>
-                                <h2 className="text-xl md:text-2xl font-black text-primary tracking-tight uppercase">Usage & Sharing</h2>
+                        {/* Section 2: Information We Collect */}
+                        <section className="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                            <div className="flex flex-col md:flex-row gap-6">
+                                <div className="flex-shrink-0">
+                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                        <Database className="w-6 h-6" />
+                                    </div>
+                                </div>
+                                <div className="space-y-4 w-full">
+                                    <h2 className="text-2xl font-bold text-slate-900">Information We Collect</h2>
+                                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                        <div className="space-y-2">
+                                            <h3 className="font-bold text-primary">Personal Identification</h3>
+                                            <p className="text-slate-600 text-sm">We collect names and email addresses voluntarily submitted by You.</p>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <h3 className="font-bold text-primary">Non-Personal Data</h3>
+                                            <p className="text-slate-600 text-sm">Browser name, language preference, referring site, operating system, and ISP details.</p>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <h3 className="font-bold text-primary">Cookies</h3>
+                                            <p className="text-slate-600 text-sm">We use cookies to enhance User experience and for record-keeping purposes.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </section>
 
-                            <div className="space-y-4">
-                                <div className="flex gap-3 p-5 rounded-xl bg-primary/5 border border-primary/10">
-                                    <div className="w-1 h-auto bg-primary rounded-full"></div>
-                                    <p className="font-medium text-gray-800 text-sm md:text-base">
+                        {/* Section 3: Usage & Sharing */}
+                        <section className="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                            <div className="flex flex-col md:flex-row gap-6">
+                                <div className="flex-shrink-0">
+                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                        <Share2 className="w-6 h-6" />
+                                    </div>
+                                </div>
+                                <div className="space-y-4">
+                                    <h2 className="text-2xl font-bold text-slate-900">Usage & Sharing</h2>
+                                    <p className="text-slate-600 leading-relaxed text-lg mb-4">
                                         We do not share Your Personal Information with anyone except to comply with laws, develop our products, or protect our rights.
                                     </p>
+                                    <ul className="space-y-3 text-slate-600">
+                                        <li className="flex gap-3">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
+                                            <span><strong>Platform Access:</strong> To provide access, customer service, and fulfil purchases.</span>
+                                        </li>
+                                        <li className="flex gap-3">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
+                                            <span><strong>Safety & Improvement:</strong> To prevent fraud and improve administration.</span>
+                                        </li>
+                                        <li className="flex gap-3">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
+                                            <span><strong>Communication:</strong> To send updates about orders, promotions, or receive feedback.</span>
+                                        </li>
+                                    </ul>
                                 </div>
-
-                                <ul className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                    <li className="flex items-start gap-3">
-                                        <div className="mt-1.5 w-1.5 h-1.5 bg-secondary rounded-full flex-shrink-0"></div>
-                                        <div className="text-sm">
-                                            <strong className="text-gray-900 block font-bold mb-1">Platform Access:</strong>
-                                            To allow You to access the Platform, provide customer service, and fulfil purchases.
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <div className="mt-1.5 w-1.5 h-1.5 bg-secondary rounded-full flex-shrink-0"></div>
-                                        <div className="text-sm">
-                                            <strong className="text-gray-900 block font-bold mb-1">Safety & Improvement:</strong>
-                                            To prevent criminal activity, fraud, and to improve the Platform administration.
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-3">
-                                        <div className="mt-1.5 w-1.5 h-1.5 bg-secondary rounded-full flex-shrink-0"></div>
-                                        <div className="text-sm">
-                                            <strong className="text-gray-900 block font-bold mb-1">Communication:</strong>
-                                            To send text messages, WhatsApp, or emails about orders, promotions, or to receive feedback.
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
                         </section>
 
-                        {/* 4. YOUR RIGHTS */}
-                        <section id="rights" className="space-y-6">
-                            <div className="flex items-center gap-3">
-                                <span className="text-[10px] font-black bg-primary text-white w-6 h-6 flex items-center justify-center rounded-md">04</span>
-                                <h2 className="text-xl md:text-2xl font-black text-primary tracking-tight uppercase">Your Rights</h2>
-                            </div>
-
-                            <p className="text-sm">You have significant control over your data. Depending on your location (India, EU/EEA, UK, California), you have specific rights:</p>
-
-                            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-                                {[
-                                    { title: "Confirmation", desc: "Access to your info." },
-                                    { title: "Correction", desc: "Rectify inaccurate data." },
-                                    { title: "Erasure", desc: "Permanently delete data." },
-                                    { title: "Portability", desc: "Request data transfer." },
-                                    { title: "Objection", desc: "Object to processing." },
-                                    { title: "Restriction", desc: "Limit data usage." }
-                                ].map((right, i) => (
-                                    <div key={i} className="p-4 rounded-xl bg-gray-50 border border-gray-100 transition-colors hover:bg-white hover:shadow-md">
-                                        <h4 className="font-black text-primary mb-1 text-[10px] uppercase tracking-wider">{right.title}</h4>
-                                        <p className="text-[11px] text-gray-500 font-medium leading-tight">{right.desc}</p>
+                        {/* Section 4: Your Rights */}
+                        <section className="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                            <div className="flex flex-col md:flex-row gap-6">
+                                <div className="flex-shrink-0">
+                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                        <ShieldCheck className="w-6 h-6" />
                                     </div>
-                                ))}
-                            </div>
-                        </section>
-
-                        {/* 5. DATA LOCATION & PROTECTION */}
-                        <section id="protection" className="space-y-6">
-                            <div className="flex items-center gap-3">
-                                <span className="text-[10px] font-black bg-primary text-white w-6 h-6 flex items-center justify-center rounded-md">05</span>
-                                <h2 className="text-xl md:text-2xl font-black text-primary tracking-tight uppercase">Data & Protection</h2>
-                            </div>
-
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                                <div className="p-6 rounded-2xl border border-gray-100 space-y-4">
-                                    <h3 className="text-sm font-black text-primary tracking-tight uppercase">Cross-Border Data Transfer</h3>
-                                    <p className="text-gray-500 text-xs leading-relaxed">
-                                        Your information is stored and processed in India on Amazon Web Service (AWS) servers. If you use our Platform from the USA, EU, EEA, or UK, you consent to this transfer.
-                                    </p>
                                 </div>
-                                <div className="p-6 rounded-2xl border border-gray-100 space-y-4">
-                                    <h3 className="text-sm font-black text-primary tracking-tight uppercase">Storage Duration</h3>
-                                    <p className="text-gray-500 text-xs leading-relaxed">
-                                        We retain information for as long as required for legal or business compliances. We take all measures reasonably necessary to protect against unauthorized access.
-                                    </p>
+                                <div className="space-y-4 w-full">
+                                    <h2 className="text-2xl font-bold text-slate-900">Your Rights</h2>
+                                    <p className="text-slate-600 text-lg mb-4">You have significant control over your data. Depending on your location, you have rights to:</p>
+                                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                                        {['Confirmation', 'Correction', 'Erasure', 'Portability', 'Objection', 'Restriction'].map((right) => (
+                                            <div key={right} className="px-4 py-3 rounded-xl bg-slate-50 border border-slate-100 font-semibold text-primary text-center">
+                                                {right}
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </section>
 
-                        {/* 6. GRIEVANCES */}
-                        <section id="grievances" className="space-y-6">
-                            <div className="flex items-center gap-3">
-                                <span className="text-[10px] font-black bg-primary text-white w-6 h-6 flex items-center justify-center rounded-md">06</span>
-                                <h2 className="text-xl md:text-2xl font-black text-primary tracking-tight uppercase">Grievances</h2>
+                        {/* Section 5: Data Protection */}
+                        <section className="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                            <div className="flex flex-col md:flex-row gap-6">
+                                <div className="flex-shrink-0">
+                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                        <Lock className="w-6 h-6" />
+                                    </div>
+                                </div>
+                                <div className="space-y-4">
+                                    <h2 className="text-2xl font-bold text-slate-900">Data Location & Protection</h2>
+                                    <div className="space-y-4 text-slate-600">
+                                        <p>
+                                            <strong>Cross-Border Data Transfer:</strong> Your information is stored and processed in India on Amazon Web Service (AWS) servers.
+                                        </p>
+                                        <p>
+                                            <strong>Storage Duration:</strong> We retain information for as long as required for legal or business compliances. We take all measures reasonably necessary to protect against unauthorized access.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
+                        </section>
 
-                            <div className="p-8 rounded-2xl border border-gray-100 text-primary text-center space-y-4">
-                                <h3 className="text-2xl font-black tracking-tight uppercase italic">Have Questions?</h3>
-                                <p className="font-bold max-w-lg mx-auto text-sm text-gray-500">
-                                    If you wish to exercise your rights, or have concerns about privacy, please write to us with a thorough description of your concern.
-                                </p>
-                                <div className="pt-4">
-                                    <Link
-                                        href="mailto:contact@medsbee.com"
-                                        className="inline-block bg-primary text-white px-10 py-4 rounded-full font-black hover:scale-105 transition-transform shadow-xl text-sm uppercase tracking-widest"
-                                    >
-                                        contact@medsbee.com
-                                    </Link>
+                        {/* Section 6: Grievances */}
+                        <section className="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                            <div className="flex flex-col md:flex-row gap-6">
+                                <div className="flex-shrink-0">
+                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                        <HelpCircle className="w-6 h-6" />
+                                    </div>
+                                </div>
+                                <div className="space-y-4 w-full">
+                                    <h2 className="text-2xl font-bold text-slate-900">Grievances & Questions</h2>
+                                    <p className="text-slate-600 text-lg">
+                                        If you wish to exercise your rights, or have concerns about privacy, please write to us with a thorough description of your concern.
+                                    </p>
+                                    <div className="pt-2">
+                                        <a href="mailto:contact@medsbee.com" className="text-blue-600 font-bold text-lg hover:underline">
+                                            contact@medsbee.com
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </section>
