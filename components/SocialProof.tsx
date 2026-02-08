@@ -110,13 +110,18 @@ export default function SocialProof() {
 
             {/* Video Modal */}
             {activeVideo && (
-                <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#002B5B]/95 backdrop-blur-md animate-in fade-in duration-300" onClick={closeVideo}>
-                    <button onClick={closeVideo} className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/20 transition-all">
+                <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-white/5 backdrop-blur-2xl animate-in fade-in duration-300" onClick={closeVideo}>
+                    <button onClick={closeVideo} className="absolute top-6 right-6 w-12 h-12 rounded-full bg-black/10 flex items-center justify-center text-primary/70 hover:text-primary hover:bg-black/20 transition-all z-[110]">
                         <X size={24} />
                     </button>
 
-                    <div className="relative w-full max-w-5xl aspect-video bg-black rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 animate-in zoom-in-95 duration-300" onClick={(e) => e.stopPropagation()}>
-                        <iframe src={`${activeVideo}?autoplay=1`} className="w-full h-full" allow="autoplay; encrypted-media" allowFullScreen></iframe>
+                    <div className="relative w-full max-w-[400px] aspect-[9/16] bg-black/20 rounded-[2.5rem] overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.1)] border border-white/20 animate-in zoom-in-95 duration-500" onClick={(e) => e.stopPropagation()}>
+                        <iframe
+                            src={`${activeVideo}${activeVideo.includes('?') ? '&' : '?'}autoplay=1`}
+                            className="w-full h-full"
+                            allow="autoplay; encrypted-media; fullscreen"
+                            allowFullScreen
+                        ></iframe>
                     </div>
                 </div>
             )}

@@ -14,7 +14,7 @@ export const socialProofData = {
             image: "/doctor1.png",
             alt: "Dr. Vishal Gabale",
             description: "The roadmap provided here is absolute gold for medical professionals.",
-            videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            videoUrl: "https://www.youtube.com/embed/6J1LRA97SX8",
         },
         {
             id: 2,
@@ -33,10 +33,10 @@ export const socialProofData = {
             handle: "172k+ followers",
             platform: "instagram",
             followers: "MBBS",
-            image: "/doctor_kajal.png",
+            image: "/kajal-photo.png",
             alt: "Dr. Kajal",
             description: "Transformative insights into wealth building for doctors.",
-            videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+            videoUrl: "https://jumpshare.com/embed/hQp87HtHjTvSpWMHSAyz",
         },
         {
             id: 4,
