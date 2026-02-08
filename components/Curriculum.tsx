@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { curriculumData } from "@/data/curriculum";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 
 export default function Curriculum() {
     const [expandedId, setExpandedId] = useState<number | null>(1);
@@ -26,38 +26,51 @@ export default function Curriculum() {
                     </div>
 
                     {/* Right side Accordion */}
-                    <div className="space-y-3">
-                        {curriculumData.modules.map((module) => (
-                            <div
-                                key={module.id}
-                                className={`rounded-xl overflow-hidden transition-all duration-300 ${
-                                    expandedId === module.id ? "ring-1 ring-primary shadow-lg bg-blue-50/50" : "border border-gray-100 bg-white hover:border-blue-200"
-                                }`}
-                            >
-                                <button
-                                    onClick={() => setExpandedId(expandedId === module.id ? null : module.id)}
-                                    className="w-full cursor-pointer px-5 md:px-6 py-4 flex items-center justify-between text-left group"
-                                    aria-expanded={expandedId === module.id}
-                                >
-                                    <span className={`text-base md:text-lg font-semibold md:font-bold transition-colors ${expandedId === module.id ? "text-primary" : "text-gray-700"}`}>
-                                        {module.title}
-                                    </span>
-                                    <div
-                                        className={`min-w-7 h-7 rounded-full flex items-center justify-center transition-all ${
-                                            expandedId === module.id ? "bg-primary text-white" : "bg-secondary text-primary"
+                    <div className="space-y-6">
+                        <div className="space-y-3">
+                            {curriculumData.modules.map((module) => (
+                                <div
+                                    key={module.id}
+                                    className={`rounded-xl overflow-hidden transition-all duration-300 ${expandedId === module.id ? "ring-1 ring-primary shadow-lg bg-blue-50/50" : "border border-gray-100 bg-white hover:border-blue-200"
                                         }`}
+                                >
+                                    <button
+                                        onClick={() => setExpandedId(expandedId === module.id ? null : module.id)}
+                                        className="w-full cursor-pointer px-5 md:px-6 py-4 flex items-center justify-between text-left group"
+                                        aria-expanded={expandedId === module.id}
                                     >
-                                        <ChevronDown size={16} className={`transition-transform duration-300 ${expandedId === module.id ? "rotate-180" : ""}`} />
-                                    </div>
-                                </button>
+                                        <span className={`text-base md:text-lg font-semibold md:font-bold transition-colors ${expandedId === module.id ? "text-primary" : "text-gray-700"}`}>
+                                            {module.title}
+                                        </span>
+                                        <div
+                                            className={`min-w-7 h-7 rounded-full flex items-center justify-center transition-all ${expandedId === module.id ? "bg-primary text-white" : "bg-secondary text-primary"
+                                                }`}
+                                        >
+                                            <ChevronDown size={16} className={`transition-transform duration-300 ${expandedId === module.id ? "rotate-180" : ""}`} />
+                                        </div>
+                                    </button>
 
-                                {expandedId === module.id && (
-                                    <div className="px-5 md:px-6 pb-4 animate-in fade-in slide-in-from-top-1 duration-200">
-                                        <p className="text-gray-600 leading-relaxed text-sm font-medium">{module.description}</p>
-                                    </div>
-                                )}
-                            </div>
-                        ))}
+                                    {expandedId === module.id && (
+                                        <div className="px-5 md:px-6 pb-4 animate-in fade-in slide-in-from-top-1 duration-200">
+                                            <p className="text-gray-600 leading-relaxed text-sm font-medium">{module.description}</p>
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* View Complete Curriculum Button */}
+                        <div className="pt-0">
+                            <a
+                                href={(curriculumData as any).fullCurriculumHref}
+                                className="inline-flex items-center gap-2 text-primary font-bold group no-underline"
+                            >
+                                <span className="text-base md:text-lg font-semibold transition-all border-b-2 border-transparent group-hover:border-primary pb-px">
+                                    {(curriculumData as any).fullCurriculumLabel}
+                                </span>
+                                <ArrowRight size={20} className="transition-transform duration-300 group-hover:translate-x-1" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

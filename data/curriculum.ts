@@ -41,4 +41,6 @@ export const curriculumData = {
             isExpanded: false,
         },
     ],
+    fullCurriculumLabel: "View Complete Curriculum",
+    fullCurriculumHref: "/full-curriculum", // Placeholder or actual link
 };
