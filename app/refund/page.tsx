@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { RefreshCcw, Clock, FileText, CreditCard, AlertTriangle, ChevronLeft } from 'lucide-react'
+import { Clock, FileText, CreditCard, AlertTriangle, ChevronLeft } from 'lucide-react'
 
 export default function RefundPolicy() {
     return (
@@ -30,70 +30,25 @@ export default function RefundPolicy() {
                     </header>
 
                     <div className="space-y-6">
-                        {/* Section 1: Commitment */}
-                        <section className="bg-white rounded-3xl p-8 md:p-10  border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                        {/* Section 1: All Sales Are Final */}
+                        <section className="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                             <div className="flex flex-col md:flex-row gap-6">
                                 <div className="flex-shrink-0">
-                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
-                                        <RefreshCcw className="w-6 h-6" />
+                                    <div className="w-12 h-12 rounded-2xl bg-red-50 flex items-center justify-center text-red-600">
+                                        <AlertTriangle className="w-6 h-6" />
                                     </div>
                                 </div>
                                 <div className="space-y-4">
-                                    <h2 className="text-2xl font-bold text-slate-900">Our Commitment to Your Satisfaction</h2>
+                                    <h2 className="text-2xl font-bold text-slate-900">All Sales Are Final</h2>
                                     <p className="text-slate-600 leading-relaxed text-lg">
-                                        At MedsBee, we are committed to providing high-quality medical education. We want you to be fully satisfied with your purchase. This Refund Policy outlines the terms and conditions for refunds on our courses and services.
+                                        This is a digital product delivered instantly upon purchase. Once access is granted, the product cannot be returned, revoked, or exchanged.
                                     </p>
                                 </div>
                             </div>
                         </section>
 
-                        {/* Section 2: Eligibility */}
-                        <section className="bg-white rounded-3xl p-8 md:p-10  border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
-                            <div className="flex flex-col md:flex-row gap-6">
-                                <div className="flex-shrink-0">
-                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
-                                        <Clock className="w-6 h-6" />
-                                    </div>
-                                </div>
-                                <div className="space-y-4">
-                                    <h2 className="text-2xl font-bold text-slate-900">Eligibility for Refunds</h2>
-                                    <ul className="space-y-4 text-slate-600">
-                                        <li className="flex items-start gap-3">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
-                                            <span className="text-lg">Refund requests must be made within 14 days of purchase.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
-                                            <span className="text-lg">You must not have completed more than 25% of the course content.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
-                                            <span className="text-lg">Refunds are not available for individual modules or partial course completion.</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* Section 3: How to Request */}
-                        <section className="bg-white rounded-3xl p-8 md:p-10  border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
-                            <div className="flex flex-col md:flex-row gap-6">
-                                <div className="flex-shrink-0">
-                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
-                                        <FileText className="w-6 h-6" />
-                                    </div>
-                                </div>
-                                <div className="space-y-4">
-                                    <h2 className="text-2xl font-bold text-slate-900">How to Request a Refund</h2>
-                                    <p className="text-slate-600 leading-relaxed text-lg">
-                                        To request a refund, please email <a href="mailto:contact@medsbee.com" className="text-blue-600 font-semibold hover:underline">contact@medsbee.com</a>  with your order number or phone number and reason for the refund. Our team will review your request and respond within 3 business days.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-
-                        {/* Section 4: Processing */}
-                        <section className="bg-white rounded-3xl p-8 md:p-10  border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                        {/* Section 2: No Refunds Policy */}
+                        <section className="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                             <div className="flex flex-col md:flex-row gap-6">
                                 <div className="flex-shrink-0">
                                     <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
@@ -101,49 +56,62 @@ export default function RefundPolicy() {
                                     </div>
                                 </div>
                                 <div className="space-y-4">
-                                    <h2 className="text-2xl font-bold text-slate-900">Refund Processing</h2>
+                                    <h2 className="text-2xl font-bold text-slate-900">No Refunds Under Any Circumstances</h2>
+                                    <p className="text-slate-600 leading-relaxed text-lg mb-4">
+                                        Accordingly, we do not offer refunds, cancellations, or chargebacks under any circumstances, including but not limited to:
+                                    </p>
                                     <ul className="space-y-4 text-slate-600">
                                         <li className="flex items-start gap-3">
                                             <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
-                                            <span className="text-lg">Approved refunds will be processed within 5-10 business days.</span>
+                                            <span className="text-lg">Change of mind</span>
                                         </li>
                                         <li className="flex items-start gap-3">
                                             <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
-                                            <span className="text-lg">Refunds will be issued to the original payment method used for the purchase.</span>
+                                            <span className="text-lg">Inability to complete or continue the course</span>
                                         </li>
                                         <li className="flex items-start gap-3">
                                             <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
-                                            <span className="text-lg">Any applicable taxes or gateway fees may be deducted from the refund amount.</span>
+                                            <span className="text-lg">Misinterpretation of the product description</span>
+                                        </li>
+                                        <li className="flex items-start gap-3">
+                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
+                                            <span className="text-lg">Personal expectations not being met</span>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </section>
 
-                        {/* Section 5: Non-Refundable */}
-                        <section className="bg-white rounded-3xl p-8 md:p-10  border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                        {/* Section 3: Review Before Purchase */}
+                        <section className="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
                             <div className="flex flex-col md:flex-row gap-6">
                                 <div className="flex-shrink-0">
                                     <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
-                                        <AlertTriangle className="w-6 h-6" />
+                                        <FileText className="w-6 h-6" />
                                     </div>
                                 </div>
                                 <div className="space-y-4">
-                                    <h2 className="text-2xl font-bold text-slate-900">Non-Refundable Items</h2>
-                                    <ul className="space-y-4 text-slate-600">
-                                        <li className="flex items-start gap-3">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
-                                            <span className="text-lg">Downloadable course materials once accessed or downloaded.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
-                                            <span className="text-lg">Live webinar or consultation sessions that have already taken place.</span>
-                                        </li>
-                                        <li className="flex items-start gap-3">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5 shrink-0" />
-                                            <span className="text-lg">Subscription fees for the current billing period.</span>
-                                        </li>
-                                    </ul>
+                                    <h2 className="text-2xl font-bold text-slate-900">Review Before Purchase</h2>
+                                    <p className="text-slate-600 leading-relaxed text-lg">
+                                        We strongly encourage you to review all product details, descriptions, and sample content carefully before making a purchase. If you have any questions prior to buying, please contact us for clarification.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        {/* Section 4: Agreement */}
+                        <section className="bg-white rounded-3xl p-8 md:p-10 border border-slate-100 transition-all hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)]">
+                            <div className="flex flex-col md:flex-row gap-6">
+                                <div className="flex-shrink-0">
+                                    <div className="w-12 h-12 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                        <Clock className="w-6 h-6" />
+                                    </div>
+                                </div>
+                                <div className="space-y-4">
+                                    <h2 className="text-2xl font-bold text-slate-900">Your Agreement</h2>
+                                    <p className="text-slate-600 leading-relaxed text-lg">
+                                        By completing the purchase, you acknowledge and agree to this No Refund Policy.
+                                    </p>
                                 </div>
                             </div>
                         </section>
