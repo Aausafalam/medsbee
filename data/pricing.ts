@@ -18,7 +18,7 @@ export const pricingData = {
                 { text: "Course Upgrades at Zero Cost", included: false },
                 { text: "Certificate of Completion", included: true },
             ],
-            cta: { label: "Enroll Now", href: "#" },
+            cta: { label: "Enroll Now", href: "https://superprofile.bio/course/Finance?checkout=true" },
             ctaSecondary: { label: "100% Money Back", href: "#" },
             isFeatured: false,
             badge: null,
