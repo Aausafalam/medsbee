@@ -4,7 +4,7 @@ export const heroData = {
     description: "The Finance Course Every Doctor Should’ve Been Taught in Med School",
     primaryCta: { label: "Enroll Now", href: "#pricing" },
     image: {
-        src: "2121 1.png",
+        src: "karan6.webp",
         alt: "Doctor with confident gesture",
     },
 };

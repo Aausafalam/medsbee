@@ -18,7 +18,9 @@ export default function Instructor() {
                         </div>
 
                         <p className="text-sm md:text-lg text-white/80 font-medium max-w-xxl leading-relaxed">
-                            Through working closely with doctors, including family members, colleagues, and peers, he recognised that many medical professionals struggle with financial clarity despite professional success. His work focuses on helping doctors simplify investments, manage debt effectively, and build structured financial systems that allow them to grow long-term wealth alongside demanding medical careers.
+                            Through working closely with doctors, including family members, colleagues, and peers, he recognised that many medical professionals struggle with financial clarity despite
+                            professional success. His work focuses on helping doctors simplify investments, manage debt effectively, and build structured financial systems that allow them to grow
+                            long-term wealth alongside demanding medical careers.
                         </p>
 
                         <div className="space-y-1">
@@ -30,7 +32,7 @@ export default function Instructor() {
                     {/* Right Content (Image) */}
                     <div className="relative h-[250px] md:h-[400px] lg:h-[510px]">
                         <div className="relative w-full h-full flex items-end justify-center lg:justify-end">
-                            <Image src="/krn 1.png" alt="Karan Chawla" fill className="object-contain object-bottom drop-shadow-[0_15px_40px_rgba(255,215,0,0.15)]" priority />
+                            <Image src="/karan6.webp" alt="Karan Chawla" fill className="object-contain object-bottom drop-shadow-[0_15px_40px_rgba(255,215,0,0.15)]" priority />
                         </div>
                     </div>
                 </div>
