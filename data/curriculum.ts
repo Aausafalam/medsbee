@@ -42,5 +42,5 @@ export const curriculumData = {
         },
     ],
     fullCurriculumLabel: "View Complete Curriculum",
-    fullCurriculumHref: "/full-curriculum", // Placeholder or actual link
+    fullCurriculumHref: "https://superprofile.bio/course/Finance", // Placeholder or actual link
 };
