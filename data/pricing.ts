@@ -62,7 +62,7 @@ export const pricingData = {
             ],
             cta: { label: "Enroll Now", href: "https://superprofile.bio/course/Finance" },
             ctaSecondary: { label: "100% Money Back", href: "#" },
-            isFeatured: true,true
+            isFeatured: true,
             badge: "⭐ MOST POPULAR",
         },
     ],
