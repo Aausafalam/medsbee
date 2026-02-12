@@ -14,7 +14,7 @@ export default function Instructor() {
                     <div className="space-y-4 pt-10 md:py-12  md:space-y-6">
                         <div className="space-y-2">
                             <p className="text-secondary font-bold uppercase tracking-widest text-xs md:text-sm">Course Instructor</p>
-                            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">Karan Chawla</h2>
+                            <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">Dr. Karan Chawla</h2>
                         </div>
 
                         <p className="text-sm md:text-lg text-white/80 font-medium max-w-xxl leading-relaxed">

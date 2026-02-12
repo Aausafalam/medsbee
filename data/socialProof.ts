@@ -1,5 +1,5 @@
 export const socialProofData = {
-    title: "Trusted by",
+    title: "Testimonials By",
     titleHighlight: "Top Medical Creators & Doctors",
     playVideoLabel: "Watch Success Story",
     cta: { label: "Start Your Journey", href: "#pricing" },
