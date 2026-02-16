@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Play, X } from 'lucide-react'
 import Link from 'next/link'
 import { sneakPeekData } from '@/data/sneakPeek'
+import { sendGAEvent } from "@next/third-parties/google";
 
 export default function StickyCTA() {
     const [isVisible, setIsVisible] = useState(false)
@@ -52,6 +53,7 @@ export default function StickyCTA() {
                     {/* Enroll Now Button */}
                     <Link
                         href="#pricing"
+                        onClick={() => sendGAEvent({ event: "enroll_now_click", location: "sticky_cta" })}
                         className="bg-secondary text-primary px-8 md:px-12 py-3 md:py-3.5 whitespace-nowrap rounded-full font-bold text-sm md:text-base hover:bg-yellow-400 transition-all hover:scale-[1.02] active:scale-95 shadow-lg"
                     >
                         Enroll Now

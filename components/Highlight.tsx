@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { highlightData } from '@/data/highlight'
+import { sendGAEvent } from "@next/third-parties/google";
 
 export default function Highlight() {
   return (
@@ -30,6 +31,7 @@ export default function Highlight() {
             <div className="pt-4">
               <Link
                 href="#pricing"
+                onClick={() => sendGAEvent({ event: "enroll_now_click", location: "highlight" })}
                 className="inline-block bg-secondary text-primary px-8 py-3 rounded-full font-bold hover:bg-yellow-400 transition-all hover:scale-105"
               >
                 Enroll Now

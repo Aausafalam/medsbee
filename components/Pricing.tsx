@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { pricingData } from "@/data/pricing";
 import { Check, X, Star } from "lucide-react";
+import { sendGAEvent } from "@next/third-parties/google";
 
 export default function Pricing() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -59,11 +60,10 @@ export default function Pricing() {
                         {[...pricingData.plans].reverse().map((plan, index) => (
                             <div
                                 key={plan.id}
-                                className={`flex-shrink-0 w-[85vw] sm:w-[350px] py-2 md:py-3 md:w-auto snap-center relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden transition-all duration-500 flex flex-col h-auto shadow-lg hover:shadow-xl hover:scale-[1.02] hover:z-20 ${
-                                    plan.isFeatured
-                                        ? "bg-[#002B5B] text-white ring-2 ring-secondary/30 z-10 hover:shadow-[0_20px_50px_rgba(255,215,0,0.4)]"
-                                        : "bg-white text-primary border border-blue-100/50 hover:shadow-[0_20px_40px_rgba(0,43,91,0.2)]"
-                                } ${plan.id === 1 ? "md:order-1" : plan.id === 2 ? "md:order-2" : "md:order-3"}`}
+                                className={`flex-shrink-0 w-[85vw] sm:w-[350px] py-2 md:py-3 md:w-auto snap-center relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden transition-all duration-500 flex flex-col h-auto shadow-lg hover:shadow-xl hover:scale-[1.02] hover:z-20 ${plan.isFeatured
+                                    ? "bg-[#002B5B] text-white ring-2 ring-secondary/30 z-10 hover:shadow-[0_20px_50px_rgba(255,215,0,0.4)]"
+                                    : "bg-white text-primary border border-blue-100/50 hover:shadow-[0_20px_40px_rgba(0,43,91,0.2)]"
+                                    } ${plan.id === 1 ? "md:order-1" : plan.id === 2 ? "md:order-2" : "md:order-3"}`}
                             >
                                 {/* Star Badge */}
                                 <div className="absolute top-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-0.5">
@@ -98,9 +98,8 @@ export default function Pricing() {
                                                     {feature.included ? <Check size={16} strokeWidth={3} /> : <X size={16} strokeWidth={3} />}
                                                 </div>
                                                 <span
-                                                    className={`text-[13px] md:text-sm leading-tight font-medium ${
-                                                        plan.isFeatured ? "text-white" : "text-gray-700"
-                                                    } ${!feature.included ? "line-through grayscale" : ""}`}
+                                                    className={`text-[13px] md:text-sm leading-tight font-medium ${plan.isFeatured ? "text-white" : "text-gray-700"
+                                                        } ${!feature.included ? "line-through grayscale" : ""}`}
                                                 >
                                                     {feature.text}
                                                 </span>
@@ -112,11 +111,17 @@ export default function Pricing() {
                                     <div className="space-y-3 pt-2 mt-auto">
                                         <Link
                                             href={plan.cta.href}
-                                            className={`block text-center py-3 rounded-xl font-bold transition-all text-lg uppercase tracking-wide ${
-                                                plan.isFeatured
-                                                    ? "bg-secondary text-[#002B5B] hover:bg-yellow-400 shadow-[0_5px_15px_rgba(255,215,0,0.3)]"
-                                                    : "bg-[#002B5B] text-white hover:bg-[#002B5B]/80"
-                                            }`}
+                                            onClick={() => {
+                                                sendGAEvent({
+                                                    event: "enroll_now_checkout",
+                                                    value: plan.price,
+                                                    plan_name: plan.name,
+                                                });
+                                            }}
+                                            className={`block text-center py-3 rounded-xl font-bold transition-all text-lg uppercase tracking-wide ${plan.isFeatured
+                                                ? "bg-secondary text-[#002B5B] hover:bg-yellow-400 shadow-[0_5px_15px_rgba(255,215,0,0.3)]"
+                                                : "bg-[#002B5B] text-white hover:bg-[#002B5B]/80"
+                                                }`}
                                         >
                                             <span className="relative z-10">{plan.cta.label}</span>
                                         </Link>

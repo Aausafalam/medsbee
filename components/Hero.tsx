@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { heroData } from "@/data/hero";
+import { sendGAEvent } from "@next/third-parties/google";
 
 export default function Hero() {
     return (
@@ -75,6 +76,7 @@ export default function Hero() {
                         <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 pt-2">
                             <Link
                                 href={heroData.primaryCta.href}
+                                onClick={() => sendGAEvent({ event: "enroll_now_click", location: "hero" })}
                                 className="group relative isolate overflow-hidden inline-flex items-center justify-center bg-secondary text-primary px-8 md:px-11 py-3 md:py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-lg md:text-2xl shadow-[0_10px_30px_rgba(255,215,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,215,0,0.5)] active:scale-95"
                             >
                                 <span className="relative z-10 flex items-center gap-3">
