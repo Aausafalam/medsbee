@@ -52,10 +52,10 @@ export default function Pricing() {
                 </div>
 
                 {/* Pricing Cards Container */}
-                <div className="relative max-w-[1400px] mx-auto px-0 md:px-10">
+                <div className="relative max-w-[1200px] mx-auto px-0 md:px-10">
                     <div
                         ref={scrollContainerRef}
-                        className="flex md:grid md:grid-cols-3 gap-2 md:gap-4 px-1 lg:gap-8 overflow-x-auto py-6 md:py-8 snap-x snap-mandatory no-scrollbar pb-6 md:pb-8 items-stretch"
+                        className="flex md:grid md:grid-cols-2 gap-2 md:gap-4 px-1 lg:gap-8 overflow-x-auto py-6 md:py-8 snap-x snap-mandatory no-scrollbar pb-6 md:pb-8 items-stretch"
                     >
                         {[...pricingData.plans].reverse().map((plan, index) => (
                             <div
@@ -79,11 +79,11 @@ export default function Pricing() {
                                         <p className={`text-[13px] font-medium leading-tight px-2 ${plan.isFeatured ? "text-blue-100/70" : "text-gray-500"}`}>{plan.description}</p>
 
                                         <div className="pt-2 space-y-0.5">
-                                            {plan.originalPrice && (
+                                            {/* {plan.originalPrice && (
                                                 <div className={`text-sm font-medium line-through decoration-red-500/80 decoration-1 ${plan.isFeatured ? "text-blue-200/50" : "text-gray-400"}`}>
                                                     {plan.originalPrice}
                                                 </div>
-                                            )}
+                                            )} */}
                                             <div className="flex items-center justify-center gap-1">
                                                 <span className="text-3xl md:text-4xl font-bold tracking-tighter leading-none">{plan.price}</span>
                                                 <span className={`text-base font-bold ${plan.isFeatured ? "text-blue-100/70" : "text-gray-500"}`}>/-</span>
