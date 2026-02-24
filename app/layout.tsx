@@ -1,6 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, DM_Serif_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
@@ -14,6 +14,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
     subsets: ["latin"],
     variable: "--font-mono",
+    display: "swap",
+});
+
+const dmSerif = DM_Serif_Display({
+    subsets: ["latin"],
+    weight: "400",
+    variable: "--font-serif",
     display: "swap",
 });
 
@@ -47,7 +54,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
+            <body className={`${geistSans.variable} ${geistMono.variable} ${dmSerif.variable} font-sans antialiased`}>
                 {children}
                 <Analytics />
                 <GoogleAnalytics gaId="G-82N979X50H" />

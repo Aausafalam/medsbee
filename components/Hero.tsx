@@ -3,102 +3,128 @@ import Link from "next/link";
 import Image from "next/image";
 import { heroData } from "@/data/hero";
 import { sendGAEvent } from "@next/third-parties/google";
+import { ArrowRight, Play } from "lucide-react";
 
 export default function Hero() {
     return (
-        <section className="relative bg-[#0a192f] text-white  overflow-hidden min-h-[65vh]  flex items-center">
-            {/* Enhanced Background with subtle swirling lines and glows */}
-            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                <Image src="/hero-bg 1.png" alt="Hero Background" fill className="opacity-20 object-cover object-center transition-opacity duration-1000" priority />
-                {/* Subtle Glows */}
-                <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full animate-pulse-slow"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-yellow-500/5 blur-[100px] rounded-full animate-pulse-slow delayer-2000"></div>
-            </div>
+        <section className="relative bg-[#071324] text-white flex flex-col items-center md:min-h-[calc(100vh-80px)] min-h-[calc(100vh-80px)] justify-between">
+            {/* Main Content Area */}
+            <div className="mx-auto max-w-[1450px] px-4 pt-6 md:pt-8 relative z-10 w-full flex-grow flex flex-col justify-center">
+                <div className="flex flex-col md:flex-row lg:gap-8 items-center">
 
-            <div className="mx-auto max-w-[1450px] px-4  relative z-10 w-full">
-                <div className="flex flex-col md:flex-row gap-6 lg:gap-16 items-center p-0">
-                    {/* Image - Left Side (Restored size for a more beautiful look) */}
-                    <div className="order-2 md:order-1  relative h-[400px] md:h-[600px] lg:h-[660px] w-full md:w-[42%] lg:w-[40%] flex items-end justify-center flex-shrink-0">
-                        <div className="relative w-full h-full max-w-lg mx-auto">
-                            <div className="relative w-full h-full flex items-end">
-                                <div className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full scale-110"></div>
-                                <div className="relative w-full h-[110%] absolute bottom-0 flex items-end justify-center">
-                                    <Image
-                                        src={`/${heroData.image.src}`}
-                                        alt={heroData.image.alt}
-                                        width={650}
-                                        height={750}
-                                        className="object-contain object-bottom w-full h-full relative z-10 drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-                                        priority
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="absolute bottom-4 -right-12 z-10">
-                                <svg width="110" height="110" viewBox="0 0 100 100" className="opacity-40">
-                                    <circle cx="40" cy="50" r="18" stroke="white" strokeWidth="1" fill="none" />
-                                    <text x="40" y="56" textAnchor="middle" fill="white" fontSize="14" fontWeight="bold">
-                                        ₹
-                                    </text>
-                                    <circle cx="65" cy="40" r="14" stroke="white" strokeWidth="1" fill="none" />
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Content - Right Side (Wider container to accommodate single-line text naturally) */}
-                    <div className="order-1 md:order-2 mt-8 md:mt-0 flex flex-col items-center md:items-start text-center md:text-left space-y-6 md:space-y-10 flex-grow w-full md:w-[58%] lg:w-[60%]">
-                        <div className="space-y-1 md:space-y-2 lg:space-y-4">
-                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[66px] md:font-normal font-semibold leading-[1.1] text-white tracking-tight drop-shadow-sm">{heroData.headline}</h1>
-
-                            <div className="relative inline-block mt-1 md:mt-2">
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[66px] md:font-normal font-semibold leading-[1.1] text-white tracking-tight">
-                                    Now Master{" "}
-                                    <span className="text-secondary relative">
-                                        Money
-                                        {/* SVG Swoosh Underline */}
-                                        <svg
-                                            className="absolute -bottom-2 md:-bottom-4 left-0 w-full h-3 md:h-6 text-secondary transform translate-y-1"
-                                            viewBox="0 0 320 20"
-                                            fill="none"
-                                            preserveAspectRatio="none"
-                                        >
-                                            <path d="M4 14C80 8 160 8 316 14.5" stroke="currentColor" strokeWidth="6" strokeLinecap="round" className="opacity-90" />
-                                        </svg>
-                                    </span>
-                                </h1>
-                            </div>
+                    {/* Left/Top Content */}
+                    <div className="flex flex-col items-start text-left space-y-3 md:space-y-8 w-full md:w-1/2 lg:w-[55%]">
+                        <div className="space-y-1">
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[62px] font-serif leading-[1.05] tracking-tight">
+                                <span className="block">You Mastered Medicine.</span>
+                                <span className="block mt-1">
+                                    Now Master <span className="text-[#ffd700] italic">Money.</span>
+                                </span>
+                            </h1>
                         </div>
 
-                        <p className="text-base sm:text-lg md:text-xl lg:text-xl text-white/90 leading-relaxed font-normal border-l-0 md:border-l-4 border-secondary/40 pl-0 md:pl-4 max-w-none mt-5">
-                            {heroData.description}
-                        </p>
+                        <div className="flex items-start gap-3 max-w-sm">
+                            <div className="w-[2.5px] h-full  min-h-[65px] md:min-h-[75px] bg-[#ffd700] opacity-100 flex-shrink-0" />
+                            <p className="text-sm md:text-base text-white/90 font-sans leading-relaxed">
+                                Build a <span className="text-[#ffd700] font-bold">₹10 Crore+ retirement corpus</span> while working 12-hour shifts, without quitting medicine or hiring a wealth manager.
+                            </p>
+                        </div>
 
-                        <div className="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 pt-2">
+                        {/* Tagline Badge - Pill style */}
+                        <div className="inline-flex md:-mt-4 items-center gap-2 bg-[#1a2533] border border-white/10 px-3 py-1.5 rounded-full text-xs text-[#ffd700] hover:bg-[#253040] transition-colors">
+                            <span className="text-[#ffd700]">★</span>
+                            <span className="font-sans font-medium uppercase tracking-wider">{heroData.tagline}</span>
+                        </div>
+
+                        {/* Desktop CTA area - Inside left container */}
+                        <div className="hidden md:flex flex-col gap-3 mt-4 relative z-20 w-full max-w-sm">
                             <Link
                                 href={heroData.primaryCta.href}
                                 onClick={() => sendGAEvent({ event: "enroll_now_click", location: "hero" })}
-                                className="group relative isolate overflow-hidden inline-flex items-center justify-center bg-secondary text-primary px-8 md:px-11 py-3 md:py-4 rounded-full font-semibold hover:scale-105 transition-all duration-300 text-lg md:text-2xl shadow-[0_10px_30px_rgba(255,215,0,0.3)] hover:shadow-[0_15px_40px_rgba(255,215,0,0.5)] active:scale-95"
+                                className="group"
                             >
-                                <span className="relative z-10 flex items-center gap-3">
-                                    {heroData.primaryCta.label}
-                                    <svg
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="4"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        className="group-hover:translate-x-1 transition-transform"
-                                    >
-                                        <path d="M5 12h14m-7-7 7 7-7 7" />
-                                    </svg>
-                                </span>
+                                <div className="bg-[#ffd700] text-[#071324] px-6 py-4 md:px-8 md:py-3.5 rounded-lg flex items-center justify-between w-full shadow-[0_10px_30px_rgba(255,215,0,0.2)] hover:scale-[1.01] transition-all duration-300">
+                                    <span className="text-xl md:text-2xl font-serif font-bold italic tracking-tight uppercase leading-none">{heroData.primaryCta.label}</span>
+                                    <div className="bg-[#ccac00] p-1.5 md:p-2 rounded-md ml-4">
+                                        <ArrowRight size={18} className="text-[#071324]" strokeWidth={3} />
+                                    </div>
+                                </div>
                             </Link>
+
+                            <button
+                                onClick={() => document.getElementById('sneak-peek')?.scrollIntoView({ behavior: 'smooth' })}
+                                className="flex items-center justify-center gap-2.5 py-2.5 text-white/70 hover:text-white transition-colors bg-[#1a2533]/40 border border-white/5 rounded-lg backdrop-blur-sm"
+                            >
+                                <div className="w-7 h-7 rounded-full border border-white/20 flex items-center justify-center">
+                                    <Play fill="white" size={10} className="translate-x-0.5" />
+                                </div>
+                                <span className="text-sm font-medium tracking-wide">{heroData.secondaryCta.label}</span>
+                            </button>
                         </div>
                     </div>
+
+                    {/* Right/Bottom Image Content */}
+                    <div className="relative -left-7 w-full md:w-1/2 lg:w-[50%] flex justify-center items-end -mb-5 h-[380px] md:h-[450px] lg:h-[590px] lg:-mb-5 mt-auto">
+                        <div className="relative w-full h-full flex items-end justify-center">
+                            <Image
+                                src={`/${heroData.image.src}`}
+                                alt={heroData.image.alt}
+                                width={450}
+                                height={600}
+                                className="object-contain object-bottom w-auto h-full relative z-10"
+                                priority
+                            />
+
+                            {/* Floating Community Badge */}
+                            <div className="absolute top-[35%] right-2 md:right-4 z-20 bg-[#ffd700] text-[#071324] px-4 py-3 md:px-6 md:py-5 rounded-2xl md:rounded-[2rem] shadow-[0_10px_40px_rgba(255,215,0,0.6)] flex flex-col items-center justify-center border border-[#071324]/5 transition-transform hover:scale-105">
+                                <span className="text-xl md:text-3xl font-bold font-sans leading-none tracking-tight">80K+</span>
+                                <span className="text-[8px] md:text-[11px] font-bold font-sans mt-0.5 md:mt-1 leading-tight text-center">Doctors<br />in Community</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Mobile CTA area - Below image */}
+                <div className="flex md:hidden flex-col gap-3  pb-8 relative z-20 w-full max-w-sm mx-auto">
+                    <Link
+                        href={heroData.primaryCta.href}
+                        onClick={() => sendGAEvent({ event: "enroll_now_click", location: "hero" })}
+                        className="group"
+                    >
+                        <div className="bg-[#ffd700] text-[#071324] px-6 py-4 rounded-lg flex items-center justify-between w-full shadow-[0_10px_30px_rgba(255,215,0,0.2)]">
+                            <span className="text-xl font-serif font-bold italic tracking-tight uppercase leading-none">{heroData.primaryCta.label}</span>
+                            <div className="bg-[#ccac00] p-1.5 rounded-md ml-4">
+                                <ArrowRight size={18} className="text-[#071324]" strokeWidth={3} />
+                            </div>
+                        </div>
+                    </Link>
+
+                    <button
+                        onClick={() => document.getElementById('sneak-peek')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="flex items-center justify-center gap-2.5 py-2.5 text-white/70 hover:text-white transition-colors bg-[#1a2533]/40 border border-white/5 rounded-lg backdrop-blur-sm"
+                    >
+                        <div className="w-7 h-7 rounded-full border border-white/20 flex items-center justify-center">
+                            <Play fill="white" size={10} className="translate-x-0.5" />
+                        </div>
+                        <span className="text-sm font-medium tracking-wide">{heroData.secondaryCta.label}</span>
+                    </button>
+                </div>
+            </div>
+
+            {/* Bottom Stats Bar */}
+            <div className="w-full bg-[#ffd700] text-[#071324] py-4 md:py-6 px-4 relative z-10 border-t border-[#071324]/10 shrink-0">
+                <div className="mx-auto max-w-[1450px] grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+                    {heroData.stats.map((stat, idx) => (
+                        <div key={idx} className="flex flex-col items-center text-center group">
+                            <h3 className="text-xl md:text-2xl font-serif font-bold italic leading-none transition-transform group-hover:scale-105 duration-300">
+                                {stat.title}
+                            </h3>
+                            <div className="h-[1px] w-8 bg-[#071324]/20 my-1.5 md:my-2 rounded-full" />
+                            <p className="text-[9px] md:text-[10px] font-bold font-sans opacity-95 uppercase tracking-widest leading-tight">
+                                {stat.subtitle}
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

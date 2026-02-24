@@ -1,41 +1,37 @@
 export const roadmapData = {
     title: "A simple roadmap, built for doctors",
-    subtitle: "Struggling With These Money Decisions As A Doctor?",
-    image: {
-        src: "/roadmap_medical_financial.png",
-        alt: "Doctor reviewing roadmap",
-    },
+    subtitle: "Struggling With These Money Decisions?",
+    intro: "You spent 7+ years mastering medicine but no one taught you money, So you end up with blind SIPs, wrong insurance, and retirement anxiety.",
     features: [
         {
             id: 1,
-            title: "Unsure How to Start Investing",
-            description: "When to begin, where to invest, and how much feels unclear",
-            icon: "TrendingUp",
+            title: "Where to Start Investing",
+            description: "When, how much, and which instruments — all unclear for a doctor's income.",
+            icon: "📊",
         },
         {
             id: 2,
-            title: "Selecting the Right Mutual Funds",
-            description: "Too many funds, unclear risks, No clarity on how to choose",
-            icon: "PieChart",
+            title: "Which Mutual Funds",
+            description: "Too many options, unclear risks, no framework to choose confidently.",
+            icon: "🧩",
         },
         {
             id: 3,
-            title: "Choosing the Right Insurance",
-            description: "Wrong covers, wrong amounts, and poor protection",
-            icon: "ShieldCheck",
+            title: "Right Insurance Cover",
+            description: "Stuck with ULIPs or LIC policies costing lakhs that you shouldn't have.",
+            icon: "🛡️",
         },
         {
             id: 4,
-            title: "Earning Rewards with Credit Cards",
-            description: "Spending without knowing how to optimise or avoid mistakes",
-            icon: "CreditCard",
+            title: "Credit Card Strategy",
+            description: "Missing ₹2-3L/year in rewards by not optimising your spending.",
+            icon: "💳",
         },
         {
             id: 5,
-            title: "No Clear Age-Wise Financial Plan",
-            description: "Uncertain if current decisions match your life stage",
-            icon: "Calendar",
+            title: "No Age-Wise Financial Roadmap",
+            description: "Uncertain if your current decisions match where you should be in your 20s, 30s, or 40s as a doctor. No personalised path forward.",
+            icon: "📅",
         },
     ]
-
 };

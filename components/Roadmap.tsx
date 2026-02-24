@@ -1,57 +1,63 @@
 'use client'
 
-import Image from 'next/image'
 import { roadmapData } from '@/data/roadmap'
-import * as Icons from 'lucide-react'
 
 export default function Roadmap() {
   return (
-    <section id="roadmap" className="pb-12 md:pb-16   bg-white overflow-hidden">
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+    <section id="roadmap" className="py-8 md:py-14 bg-[#F8F9FA] overflow-hidden">
+      <div className="mx-auto max-w-[1400px] px-2 md:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
-          <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest">{roadmapData.title}</p>
-          <h2 className="text-2xl md:text-4xl font-bold text-primary leading-tight">
+        <div className="max-w-3xl mb-4 md:mb-10 text-left px-2">
+          <p className="text-[9px] md:text-xs font-bold text-[#b4862a] mb-1 md:mb-3 uppercase tracking-[0.2em] font-sans">
+            {roadmapData.title}
+          </p>
+          <h2 className="text-2xl md:text-5xl lg:text-6xl font-serif text-[#071324] leading-tight md:leading-[1.1] tracking-tight font-bold">
             {roadmapData.subtitle}
           </h2>
         </div>
 
-        {/* Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
-          <div className="relative h-[350px] md:h-[500px] group hidden md:block">
-            <div className="absolute inset-x-4 -inset-y-4 bg-secondary/10 rounded-3xl -rotate-2 transition-transform group-hover:rotate-0"></div>
-            <Image
-              src={roadmapData.image.src || "/placeholder.svg"}
-              alt={roadmapData.image.alt}
-              fill
-              className="object-cover rounded-3xl shadow-xl relative z-10"
-              priority
-            />
-          </div>
+        {/* Highlight Box */}
+        <div className="bg-[#FFFCF0] border-l-[3px] md:border-l-[3.5px] border-[#b4862a] p-4 md:p-8 rounded-r-xl md:rounded-r-2xl mb-5 md:mb-10 shadow-sm mx-2">
+          <p className="text-xs md:text-lg text-[#5C4033] font-medium leading-relaxed font-sans">
+            {roadmapData.intro}
+          </p>
+        </div>
 
-          {/* Features Grid - More compact */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 md:gap-y-10">
-            {roadmapData.features.map((feature) => {
-              const IconComponent = (Icons as any)[feature.icon] || Icons.HelpCircle
-              return (
-                <div
-                  key={feature.id}
-                  className="relative group flex flex-col items-start"
-                >
-                  <div className="w-8 h-8 md:w-12 md:h-12 flex items-center justify-center bg-primary/5 rounded-xl md:rounded-2xl mb-2 md:mb-4 transition-all group-hover:bg-primary group-hover:text-white group-hover:scale-110">
-                    <IconComponent className="w-4.5 h-4.5 md:w-6 md:h-6" strokeWidth={2.5} />
-                  </div>
-                  <h3 className="font-semibold md:font-bold text-primary mb-2 text-lg md:text-lg leading-tight">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed font-medium">
-                    {feature.description}
-                  </p>
-                </div>
-              )
-            })}
-          </div>
+        {/* Features Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+          {roadmapData.features.slice(0, 3).map((feature) => (
+            <div
+              key={feature.id}
+              className="bg-white p-4 md:p-8 rounded-2xl md:rounded-[2rem] shadow-[0_2px_15px_rgba(0,0,0,0.03)] flex flex-col items-start border border-gray-100/30 transition-all duration-300 hover:shadow-[0_4px_40px_rgba(0,0,0,0.06)]"
+            >
+              <div className="mb-2 md:mb-4 text-xl md:text-3xl">
+                {feature.icon}
+              </div>
+              <h3 className="font-bold text-[#071324] mb-1 md:mb-2 text-[0.8rem] md:text-xl font-sans tracking-tight leading-snug">
+                {feature.title}
+              </h3>
+              <p className="text-[10px] md:text-sm text-gray-500/90 leading-normal md:leading-relaxed font-sans font-medium">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+          {/* Second Row items */}
+          {roadmapData.features.slice(3).map((feature) => (
+            <div
+              key={feature.id}
+              className={`bg-white p-4 md:p-8 rounded-2xl md:rounded-[2rem] shadow-[0_2px_15px_rgba(0,0,0,0.03)] flex flex-col items-start border border-gray-100/30 transition-all duration-300 hover:shadow-[0_4px_40px_rgba(0,0,0,0.06)] ${feature.id === 5 ? 'col-span-2 lg:col-span-2' : ''}`}
+            >
+              <div className="mb-2 md:mb-4 text-xl md:text-3xl">
+                {feature.icon}
+              </div>
+              <h3 className="font-bold text-[#071324] mb-1 md:mb-2 text-[0.8rem] md:text-xl font-sans tracking-tight leading-snug">
+                {feature.title}
+              </h3>
+              <p className="text-[10px] md:text-sm text-gray-500/90 leading-normal md:leading-relaxed font-sans font-medium">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
