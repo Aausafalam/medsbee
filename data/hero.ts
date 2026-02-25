@@ -10,7 +10,7 @@ export const heroData = {
         alt: "Karan, Finance Instructor for Doctors",
     },
     stats: [
-        { title: "Pick Mutual Funds", subtitle: "Blind SIPs, no guesswork" },
+        { title: "Pick Mutual Funds", subtitle: "No Blind SIPs, no guesswork" },
         { title: "₹ 2-3L Annually", subtitle: "Avg Savings via Credit Cards Alone" },
         { title: "Pick Right Insurance", subtitle: "Avoid mistakes that cost Lakhs!" },
         { title: "5 To The Points Modules", subtitle: "Complete in 1-2 Weekends" },
