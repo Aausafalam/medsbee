@@ -47,7 +47,7 @@ export const pricingData = {
         {
             id: 3,
             name: "Community Access Plan",
-            price: "₹1199",
+            price: "₹999",
             // originalPrice: "₹3999",
             description: "Premium experience with WhatsApp community and more live sessions",
             features: [
