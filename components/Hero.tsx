@@ -44,7 +44,7 @@ export default function Hero() {
                                 className="group"
                             >
                                 <div className="bg-[#ffd700] text-[#071324] px-6 py-4 md:px-8 md:py-3.5 rounded-lg flex items-center justify-between w-full shadow-[0_10px_30px_rgba(255,215,0,0.2)] hover:scale-[1.01] transition-all duration-300">
-                                    <span className="text-xl md:text-2xl font-serif font-bold italic tracking-tight uppercase leading-none">{heroData.primaryCta.label}</span>
+                                    <span className="text-xl md:text-2xl font-serif font-bold  tracking-normal uppercase leading-none">{heroData.primaryCta.label}</span>
                                     <div className="bg-[#ccac00] p-1.5 md:p-2 rounded-md ml-4">
                                         <ArrowRight size={18} className="text-[#071324]" strokeWidth={3} />
                                     </div>
@@ -92,7 +92,7 @@ export default function Hero() {
                         className="group"
                     >
                         <div className="bg-[#ffd700] text-[#071324] px-6 py-4 rounded-lg flex items-center justify-between w-full shadow-[0_10px_30px_rgba(255,215,0,0.2)]">
-                            <span className="text-xl font-serif font-bold italic tracking-tight uppercase leading-none">{heroData.primaryCta.label}</span>
+                            <span className="text-xl font-serif font-bold  tracking-tight uppercase leading-none">{heroData.primaryCta.label}</span>
                             <div className="bg-[#ccac00] p-1.5 rounded-md ml-4">
                                 <ArrowRight size={18} className="text-[#071324]" strokeWidth={3} />
                             </div>
@@ -116,7 +116,7 @@ export default function Hero() {
                 <div className="mx-auto max-w-[1450px] grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
                     {heroData.stats.map((stat, idx) => (
                         <div key={idx} className="flex flex-col items-center text-center group">
-                            <h3 className="text-xl md:text-2xl font-serif font-bold italic leading-none transition-transform group-hover:scale-105 duration-300">
+                            <h3 className="text-xl md:text-2xl font-serif font-bold  leading-none transition-transform group-hover:scale-105 duration-300">
                                 {stat.title}
                             </h3>
                             <div className="h-[1px] w-8 bg-[#071324]/20 my-1.5 md:my-2 rounded-full" />

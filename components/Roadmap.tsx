@@ -4,20 +4,20 @@ import { roadmapData } from '@/data/roadmap'
 
 export default function Roadmap() {
   return (
-    <section id="roadmap" className="py-8 md:py-14 bg-[#F8F9FA] overflow-hidden">
-      <div className="mx-auto max-w-[1400px] px-2 md:px-8">
+    <section id="roadmap" className="py-8 md:py-14 bg-[#F7F9FC] overflow-hidden">
+      <div className="mx-auto max-w-[1400px] px-2 md:px-4">
         {/* Section Header */}
-        <div className="max-w-3xl mb-4 md:mb-10 text-left px-2">
+        <div className="max-w-4xl mb-4 md:mb-8 text-left px-2">
           <p className="text-[9px] md:text-xs font-bold text-[#b4862a] mb-1 md:mb-3 uppercase tracking-[0.2em] font-sans">
             {roadmapData.title}
           </p>
-          <h2 className="text-2xl md:text-5xl lg:text-6xl font-serif text-[#071324] leading-tight md:leading-[1.1] tracking-tight font-bold">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-serif text-[#071324] leading-normal md:leading-[1.1] tracking-normal font-bold">
             {roadmapData.subtitle}
           </h2>
         </div>
 
         {/* Highlight Box */}
-        <div className="bg-[#FFFCF0] border-l-[3px] md:border-l-[3.5px] border-[#b4862a] p-4 md:p-8 rounded-r-xl md:rounded-r-2xl mb-5 md:mb-10 shadow-sm mx-2">
+        <div className="bg-[#FFFCF0] border-l-[3px] md:border-l-[3.5px] border-[#b4862a] p-4 rounded-r-xl md:rounded-r-2xl mb-5 md:mb-8 shadow-sm mx-2">
           <p className="text-xs md:text-lg text-[#5C4033] font-medium leading-relaxed font-sans">
             {roadmapData.intro}
           </p>
@@ -28,7 +28,7 @@ export default function Roadmap() {
           {roadmapData.features.slice(0, 3).map((feature) => (
             <div
               key={feature.id}
-              className="bg-white p-4 md:p-8 rounded-2xl md:rounded-[2rem] shadow-[0_2px_15px_rgba(0,0,0,0.03)] flex flex-col items-start border border-gray-100/30 transition-all duration-300 hover:shadow-[0_4px_40px_rgba(0,0,0,0.06)]"
+              className="bg-white border  border-[#E8ECF4] hover:shadow-lg p-4 md:p-6 rounded-2xl md:rounded-[1rem] shadow-[0_2px_15px_rgba(0,0,0,0.03)] flex flex-col items-start transition-all duration-300 hover:shadow-[0_4px_40px_rgba(0,0,0,0.06)]"
             >
               <div className="mb-2 md:mb-4 text-xl md:text-3xl">
                 {feature.icon}
@@ -45,7 +45,7 @@ export default function Roadmap() {
           {roadmapData.features.slice(3).map((feature) => (
             <div
               key={feature.id}
-              className={`bg-white p-4 md:p-8 rounded-2xl md:rounded-[2rem] shadow-[0_2px_15px_rgba(0,0,0,0.03)] flex flex-col items-start border border-gray-100/30 transition-all duration-300 hover:shadow-[0_4px_40px_rgba(0,0,0,0.06)] ${feature.id === 5 ? 'col-span-2 lg:col-span-2' : ''}`}
+              className={`bg-white border  border-[#E8ECF4] hover:shadow-lg  p-4 md:p-6 rounded-2xl md:rounded-[1rem] shadow-[0_2px_15px_rgba(0,0,0,0.03)] flex flex-col items-start transition-all duration-300 hover:shadow-[0_4px_40px_rgba(0,0,0,0.06)] ${feature.id === 5 ? 'col-span-2 lg:col-span-2' : ''}`}
             >
               <div className="mb-2 md:mb-4 text-xl md:text-3xl">
                 {feature.icon}

@@ -1,6 +1,7 @@
 export const curriculumData = {
-    title: "Course Curriculum",
-    subtitle: "Self Paced Modules, Watch Anytime",
+    title: "COURSE CURRICULUM",
+    subtitle: "5 Modules. Watch Anytime.",
+    description: "Everything a doctor needs — from financial reset to building a ₹10 Cr corpus.",
     image: {
         src: "/curriculum_wealth_learning.png",
         alt: "Professional learning environment illustration",
@@ -8,39 +9,65 @@ export const curriculumData = {
     modules: [
         {
             id: 1,
-            title: "Module 1: The Doctor Money Reset",
-            description:
-                "Get absolute clarity on your income, expenses, debt, insurance, and investments all in one place. Uncover hidden leaks, wrong products, and blind spots before making any financial decisions.",
-            isExpanded: true,
+            number: "01",
+            title: "The Doctor Money Reset",
+            subtitle: "Get clarity on your full financial picture",
+            items: [
+                "Map income, expenses, debt & investments in one view",
+                "Find hidden financial leaks & wrong products you're paying for",
+                "Build your personal Doctor Net Worth Statement",
+                "Identify blind spots before making any new decisions"
+            ]
         },
         {
             id: 2,
-            title: "Module 2: Building the Foundation (Before You Invest)",
-            description:
-                "Create a stress-proof emergency fund and bring discipline to your monthly cashflow. Learn how to choose the right term insurance and professional indemnity without overpaying or overbuying.",
-            isExpanded: false,
+            number: "02",
+            title: "Building the Foundation",
+            subtitle: "Insurance, emergency fund & debt strategy",
+            items: [
+                "Term insurance & Professional indemnity selection",
+                "Emergency fund sizing for various specialities",
+                "Debt repayment strategy & EMI management",
+                "Monthly cashflow discipline basics"
+            ]
         },
         {
             id: 3,
-            title: "Module 3: The Investment Engine",
-            description:
-                "Build long-term wealth using mutual funds and smart asset allocation without stock-market anxiety. Understand what to avoid,how to compare and select the right mutual fund and why doctors must invest differently from others.",
-            isExpanded: false,
+            number: "03",
+            title: "The Investment Engine",
+            subtitle: "Mutual funds, SIPs & long-term wealth",
+            items: [
+                "Mutual funds: selection & comparison framework",
+                "Asset allocation for doctors vs others",
+                "Smart SIP strategies for doctors",
+                "Long-term wealth creation without stock market anxiety"
+            ]
         },
         {
             id: 4,
-            title: "Module 4: Debt, Credit Cards & Automation",
-            description: "Master EMIs, loans, and credit cards using clear, doctor-friendly frameworks. Discover the best credit cards and practical hacks to maximise rewards, savings, and cashflow.",
-            isExpanded: false,
+            number: "04",
+            title: "Debt, Credit Cards & Automation",
+            subtitle: "Save ₹2-3L/year + never pay interest again",
+            items: [
+                "Mastering EMIs & loan prepayments",
+                "Doctor-friendly credit card hacks & rewards",
+                "Automating your finances to save time",
+                "Framework for interest-free living"
+            ]
         },
         {
             id: 5,
-            title: "Module 5: Goal-Based Planning & Model Portfolios",
-            description:
-                "Convert learning into action with age-based goals and ready-to-use model portfolios. Build goal-specific investments, optimise asset allocation by life stage, and design a solid retirement plan.",
-            isExpanded: false,
+            number: "05",
+            title: "Goal-Based Planning & Model Portfolios",
+            subtitle: "Your roadmap to ₹10 Cr+ retirement",
+            items: [
+                "Age-based financial goals & planning",
+                "Ready-to-use model portfolios for doctors",
+                "Asset allocation optimization by life stage",
+                "Solid retirement design for ₹10 Cr+ corpus"
+            ]
         },
     ],
     fullCurriculumLabel: "View Complete Curriculum",
-    fullCurriculumHref: "https://superprofile.bio/course/Finance", // Placeholder or actual link
+    fullCurriculumHref: "https://superprofile.bio/course/Finance",
 };

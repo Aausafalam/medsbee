@@ -13,6 +13,6 @@ export const heroData = {
         { title: "Pick Mutual Funds", subtitle: "Blind SIPs, no guesswork" },
         { title: "₹ 2-3L Annually", subtitle: "Avg Savings via Credit Cards Alone" },
         { title: "Pick Right Insurance", subtitle: "Avoid mistakes that cost Lakhs!" },
-        { title: "5 Modules", subtitle: "Complete in 1-2 Weekends" },
+        { title: "5 To The Modules", subtitle: "Complete in 1-2 Weekends" },
     ],
 };
