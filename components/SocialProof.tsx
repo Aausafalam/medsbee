@@ -111,7 +111,7 @@ export default function SocialProof() {
                                     </div>
 
                                     {/* Testimonial Text */}
-                                    <p className="text-sm md:text-md font-medium text-[#1F2937] leading-relaxed italic flex-grow">
+                                    <p className="text-[0.8rem] md:text-md font-medium text-[#1F2937] leading-relaxed  flex-grow min-h-[100px] md:min-h-[120px]">
                                         &quot;{testimonial.testimonial}&quot;
                                     </p>
 
