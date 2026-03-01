@@ -43,72 +43,95 @@ export default function Pricing() {
     }, []);
 
     return (
-        <section id="pricing" className="py-8 md:py-12 bg-blue-50/30 overflow-hidden">
-            <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+        <section id="pricing" className="py-10 md:py-14 bg-[#F7F9FC] overflow-hidden">
+            <div className="mx-auto max-w-[1400px] px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center max-w-3xl mx-auto ">
-                    <p className="text-xs md:text-base font-semibold text-primary mb-2 md:mb-3 uppercase tracking-widest leading-none">{pricingData.title}</p>
-                    <h2 className="text-2xl md:text-4xl font-bold text-primary leading-tight">{pricingData.subtitle}</h2>
+                <div className="max-w-4xl mb-4  text-left px-2">
+                    <p className="text-[9px] md:text-xs font-bold text-[#b4862a] mb-1 md:mb-3 uppercase tracking-[0.2em] font-sans">
+                        {pricingData.title}
+                    </p>
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-serif text-[#071324] leading-tight tracking-normal font-bold">
+                        {pricingData.subtitle}
+                    </h2>
+                </div>
+
+                {/* Early Bird Banner */}
+                <div className="max-w-[1200px] mb-4 px-2 md:mb-12">
+                    <div className="bg-[#FFFBEB] border border-[#FDE68A] rounded-sm p-3 flex items-center gap-3 shadow-sm">
+                        <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse flex-shrink-0"></div>
+                        <p className="text-[0.75rem] md:text-base font-normal text-[#92400E]">
+                            ⏰ Early Bird pricing active — <span className="">limited seats remaining in this cohort</span>
+                        </p>
+                    </div>
                 </div>
 
                 {/* Pricing Cards Container */}
-                <div className="relative max-w-[1200px] mx-auto px-0 md:px-10">
+                <div className="relative max-w-[1200px] mx-auto">
                     <div
                         ref={scrollContainerRef}
-                        className="grid grid-cols-1 gap-6 md:grid-cols-2 gap-2 md:gap-4 px-1 lg:gap-8 overflow-x-auto py-6 md:py-8 snap-x snap-mandatory no-scrollbar pb-6 md:pb-8 items-stretch"
+                        className="grid grid-cols-1 md:grid-cols-2 gap-4 gap-8 overflow-visible"
                     >
-                        {[...pricingData.plans].map((plan, index) => (
+                        {pricingData.plans.map((plan, index) => (
                             <div
                                 key={plan.id}
-                                className={`flex-shrink-0 w-[85vw] sm:w-[350px] py-2 md:py-3 md:w-auto snap-center relative rounded-[1.5rem] md:rounded-[2rem] overflow-hidden transition-all duration-500 flex flex-col h-auto shadow-lg hover:shadow-xl hover:scale-[1.02] hover:z-20 ${plan.isFeatured
-                                    ? "bg-[#002B5B] text-white ring-2 ring-secondary/30 z-10 hover:shadow-[0_20px_50px_rgba(255,215,0,0.4)]"
-                                    : "bg-white text-primary border border-blue-100/50 hover:shadow-[0_20px_40px_rgba(0,43,91,0.2)]"
-                                    } ${plan.id === 1 ? "md:order-1" : plan.id === 2 ? "md:order-2" : "md:order-3"}`}
+                                className={`flex-shrink-0  md:w-full snap-center relative rounded-[1rem] p-6 md:p-8 transition-all duration-500 flex flex-col h-auto border-2 ${plan.isFeatured
+                                    ? "bg-[#071324] text-white border-[#deb100] shadow-[0_15px_40px_rgba(222,177,0,0.1)] md:scale-[1.02] z-10"
+                                    : "bg-white text-[#071324] border-[#E8ECF4] shadow-[0_5px_20px_rgba(0,0,0,0.03)]"
+                                    }`}
                             >
-                                {/* Star Badge */}
-                                <div className="absolute top-5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-0.5">
-                                    <Star size={18} className={`fill-current ${plan.isFeatured ? "text-secondary" : "text-primary/10"}`} />
-                                    {plan.badge && <span className="text-[10px] mt-1 font-bold text-secondary uppercase tracking-tighter whitespace-nowrap leading-none">{plan.badge}</span>}
-                                </div>
+                                {plan.isFeatured && (
+                                    <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                                        <div className="bg-[#F5C518] text-[#071324] px-4 py-1.5 rounded-full text-[10px] md:text-xs font-black flex items-center gap-2 whitespace-nowrap shadow-md">
+                                            <Star size={12} fill="currentColor" />
+                                            MOST POPULAR
+                                        </div>
+                                    </div>
+                                )}
 
-                                <div className="p-6 mt-2 md:p-8 pt-10 md:pt-14 space-y-4 md:space-y-6 flex-grow flex flex-col">
-                                    {/* Plan Name & Price */}
-                                    <div className="text-center space-y-2">
-                                        <h3 className="text-xl font-bold tracking-tight italic">{plan.name}</h3>
-                                        <p className={`text-[13px] font-medium leading-tight px-2 ${plan.isFeatured ? "text-blue-100/70" : "text-gray-500"}`}>{plan.description}</p>
+                                <div className="space-y-4 flex-grow flex flex-col">
+                                    {/* Plan Name & Desc */}
+                                    <div className="space-y-1">
+                                        <h3 className={`text-2xl md:text-3xl font-serif font-bold ${plan.isFeatured ? 'text-white' : 'text-[#071324]'}`}>
+                                            {plan.name}
+                                        </h3>
+                                        <p className={`text-[0.7rem] md:text-sm font-medium leading-relaxed ${plan.isFeatured ? "text-gray-400" : "text-gray-500"}`}>
+                                            {plan.description}
+                                        </p>
+                                    </div>
 
-                                        <div className="pt-2 space-y-0.5">
-                                            {/* {plan.originalPrice && (
-                                                <div className={`text-sm font-medium line-through decoration-red-500/80 decoration-1 ${plan.isFeatured ? "text-blue-200/50" : "text-gray-400"}`}>
-                                                    {plan.originalPrice}
-                                                </div>
-                                            )} */}
-                                            <div className="flex items-center justify-center gap-1">
-                                                <span className="text-3xl md:text-4xl font-bold tracking-tighter leading-none">{plan.price}</span>
-                                                <span className={`text-base font-bold ${plan.isFeatured ? "text-blue-100/70" : "text-gray-500"}`}>/-</span>
+                                    {/* Price Section */}
+                                    <div className="space-y-0.5">
+                                        <div className="flex items-baseline gap-2">
+                                            <span className={`text-xs md:text-base font-medium line-through ${plan.isFeatured ? "text-gray-500" : "text-gray-400"}`}>
+                                                {plan.originalPrice}
+                                            </span>
+                                            <div className="flex items-center">
+                                                <span className={`text-3xl md:text-5xl font-serif font-black ${plan.isFeatured ? "text-[#deb100]" : "text-[#071324]"}`}>
+                                                    {plan.price}
+                                                </span>
                                             </div>
                                         </div>
+                                        <p className="text-sm  md:text-base font-bold text-[#22C55E]">
+                                            {(plan as any).savings}
+                                        </p>
                                     </div>
 
                                     {/* Features List */}
-                                    <ul className="space-y-2.5 md:space-y-3 flex-grow py-3 border-y border-dashed border-primary/10">
+                                    <ul className="space-y-3 flex-grow py-4 border-t border-dashed border-gray-100/10">
                                         {plan.features.map((feature, idx) => (
-                                            <li key={idx} className={`flex items-start gap-2.5 transition-opacity duration-300 ${!feature.included ? "opacity-50" : ""}`}>
-                                                <div className={`mt-0.5 flex-shrink-0 ${feature.included ? "text-green-500" : "text-red-400"}`}>
-                                                    {feature.included ? <Check size={16} strokeWidth={3} /> : <X size={16} strokeWidth={3} />}
+                                            <li key={idx} className={`flex items-start gap-3 ${!feature.included ? "opacity-30" : ""}`}>
+                                                <div className={`mt-1 flex-shrink-0 ${feature.included ? "text-[#22C55E]" : "text-gray-400"}`}>
+                                                    {feature.included ? <Check size={16} strokeWidth={3} /> : <span className="text-base font-bold">✕</span>}
                                                 </div>
-                                                <span
-                                                    className={`text-[13px] md:text-sm leading-tight font-medium ${plan.isFeatured ? "text-white" : "text-gray-700"
-                                                        } ${!feature.included ? "line-through grayscale" : ""}`}
-                                                >
+                                                <span className={`text-[12px] md:text-sm font-bold font-sans tracking-tight leading-snug ${plan.isFeatured ? "text-white" : "text-[#071324]"}`}>
                                                     {feature.text}
                                                 </span>
                                             </li>
                                         ))}
                                     </ul>
 
-                                    {/* CTA Buttons */}
-                                    <div className="space-y-3 pt-2 mt-auto">
+                                    {/* CTA Button */}
+                                    <div className="pt-2 mt-auto">
                                         <Link
                                             href={plan.cta.href}
                                             onClick={() => {
@@ -118,21 +141,13 @@ export default function Pricing() {
                                                     plan_name: plan.name,
                                                 });
                                             }}
-                                            className={`block text-center py-3 rounded-xl font-bold transition-all text-lg uppercase tracking-wide ${plan.isFeatured
-                                                ? "bg-secondary text-[#002B5B] hover:bg-yellow-400 shadow-[0_5px_15px_rgba(255,215,0,0.3)]"
-                                                : "bg-[#002B5B] text-white hover:bg-[#002B5B]/80"
+                                            className={`block text-center py-3 rounded-md font-black transition-all text-base md:text-lg uppercase tracking-widest ${plan.isFeatured
+                                                ? "bg-[#F5C518] text-[#071324] hover:bg-[#deb100]/90 shadow-lg"
+                                                : "bg-[#071324] text-white hover:bg-[#071324]/90 shadow-md"
                                                 }`}
                                         >
-                                            <span className="relative z-10">{plan.cta.label}</span>
+                                            {plan.cta.label}
                                         </Link>
-                                        {/* <div className="flex flex-col items-center">
-                                            <div className="flex items-center gap-1.5 px-3 py-1 bg-green-500/10 rounded-full border border-green-500/20">
-                                                <div className="w-1 h-1 rounded-full bg-green-500 animate-pulse"></div>
-                                                <p className={`text-[9px] font-bold uppercase tracking-[0.1em] ${plan.isFeatured ? "text-green-300" : "text-green-600"}`}>
-                                                    100% Money Back
-                                                </p>
-                                            </div>
-                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -140,18 +155,19 @@ export default function Pricing() {
                     </div>
 
                     {/* Bullet Indicators (Mobile Only) */}
-                    <div className="flex items-center justify-center gap-2.5 mt-2 md:hidden">
-                        {[...pricingData.plans].reverse().map((_, idx) => (
+                    {/* <div className="flex items-center justify-center gap-2 mt-6 md:hidden">
+                        {pricingData.plans.map((_, idx) => (
                             <button
                                 key={idx}
                                 onClick={() => scrollToPlan(idx)}
-                                className={`h-1.5 rounded-full transition-all duration-300 ${activeIndex === idx ? "w-6 bg-primary" : "w-1.5 bg-primary/20 hover:bg-primary/40"}`}
+                                className={`h-2 rounded-full transition-all duration-300 ${activeIndex === idx ? "w-8 bg-[#071324]" : "w-2 bg-[#071324]/20"}`}
                                 aria-label={`Go to plan ${idx + 1}`}
                             />
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>
     );
 }
+
