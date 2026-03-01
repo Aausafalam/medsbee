@@ -5,8 +5,8 @@ export const pricingData = {
         {
             id: 1,
             name: "Self Paced",
-            price: "₹1699",
-            originalPrice: "₹2699",
+            price: "₹799",
+            originalPrice: "₹1799",
             savings: "You save ₹1000 — 37% off",
             description: "Standard plan with assignments and notes included",
             features: [
@@ -25,8 +25,8 @@ export const pricingData = {
         {
             id: 2,
             name: "Community Access",
-            price: "₹1999",
-            originalPrice: "₹3999",
+            price: "₹999",
+            originalPrice: "₹2999",
             savings: "You save ₹2000 — 50% off",
             description: "Premium — WhatsApp community, live sessions & lifetime upgrades",
             features: [
