@@ -49,24 +49,13 @@ export default function SocialProof() {
             <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="mb-0 md:mb-10 text-left">
-                    <p className="text-[10px] md:text-sm font-bold text-[#deb100] mb-2 md:mb-4 uppercase tracking-[0.2em] font-sans">
-                        {socialProofData.title}
-                    </p>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-tight tracking-normal font-bold max-w-3xl mb-4">
-                        {socialProofData.titleHighlight}
-                    </h2>
-                    <p className="text-sm md:text-lg text-gray-400 font-medium font-sans">
-                        {socialProofData.subtitle}
-                    </p>
+                    <p className="text-[10px] md:text-sm font-bold text-[#deb100] mb-2 md:mb-4 uppercase tracking-[0.2em] font-sans">{socialProofData.title}</p>
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-white leading-tight tracking-normal font-bold max-w-3xl mb-4">{socialProofData.titleHighlight}</h2>
+                    <p className="text-sm md:text-lg text-gray-400 font-medium font-sans">{socialProofData.subtitle}</p>
                 </div>
 
                 <div className="relative">
-                    <div
-                        ref={scrollRef}
-                        className="flex overflow-x-auto no-scrollbar py-4 gap-4 md:gap-8"
-                        onMouseEnter={() => setIsPaused(true)}
-                        onMouseLeave={() => setIsPaused(false)}
-                    >
+                    <div ref={scrollRef} className="flex overflow-x-auto no-scrollbar py-4 gap-4 md:gap-8" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
                         {displayTestimonials.map((testimonial, index) => (
                             <div
                                 key={`${testimonial.id}-${index}`}
@@ -102,21 +91,21 @@ export default function SocialProof() {
                                 </div>
 
                                 {/* Bottom Section: Content */}
-                                <div className="p-4 md:p-6 space-y-4 flex flex-col flex-grow">
-                                    {/* Stars */}
-                                    <div className="flex gap-0.5">
+                                {/* <div className="p-4 md:p-6 space-y-4 flex flex-col flex-grow"> */}
+                                {/* Stars */}
+                                {/* <div className="flex gap-0.5">
                                         {[...Array(5)].map((_, i) => (
                                             <Star key={i} size={18} className="fill-[#F5C518] text-[#F5C518]" />
                                         ))}
-                                    </div>
+                                    </div> */}
 
-                                    {/* Testimonial Text */}
-                                    <p className="text-[0.8rem] md:text-md font-medium text-[#1F2937] leading-relaxed  flex-grow min-h-[100px] md:min-h-[120px]">
+                                {/* Testimonial Text */}
+                                {/* <p className="text-[0.8rem] md:text-md font-medium text-[#1F2937] leading-relaxed  flex-grow min-h-[100px] md:min-h-[120px]">
                                         &quot;{testimonial.testimonial}&quot;
-                                    </p>
+                                    </p> */}
 
-                                    {/* Success Badge */}
-                                    <div className="pt-2">
+                                {/* Success Badge */}
+                                {/* <div className="pt-2">
                                         <div className="inline-flex items-center gap-2 bg-[#E6F7ED] px-4 py-2 rounded-full border border-[#BFF0D2]">
                                             <div className="flex-shrink-0 w-4 h-4 rounded-full bg-[#22C55E] flex items-center justify-center">
                                                 <Check size={10} className="text-white" />
@@ -125,25 +114,27 @@ export default function SocialProof() {
                                                 {testimonial.successBadge}
                                             </span>
                                         </div>
-                                    </div>
-                                </div>
+                                    </div> */}
+                                {/* </div> */}
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
 
-
             {/* Video Modal */}
             {activeVideo && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-300" onClick={closeVideo}>
-                    <button onClick={closeVideo} className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all z-[110]">
+                    <button
+                        onClick={closeVideo}
+                        className="absolute top-6 right-6 w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all z-[110]"
+                    >
                         <X size={24} />
                     </button>
 
                     <div className="relative w-full max-w-[400px] aspect-[9/16] bg-black rounded-[2.5rem] overflow-hidden shadow-2xl border border-white/20" onClick={(e) => e.stopPropagation()}>
                         <iframe
-                            src={`${activeVideo}${activeVideo.includes('?') ? '&' : '?'}autoplay=1`}
+                            src={`${activeVideo}${activeVideo.includes("?") ? "&" : "?"}autoplay=1`}
                             className="w-full h-full"
                             allow="autoplay; encrypted-media; fullscreen"
                             allowFullScreen
@@ -154,5 +145,3 @@ export default function SocialProof() {
         </section>
     );
 }
-
-
