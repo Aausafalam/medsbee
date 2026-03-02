@@ -2,6 +2,7 @@ import dynamic from "next/dynamic";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import SocialProof from "@/components/SocialProof";
+import Reactions from "@/components/Reactions";
 import Roadmap from "@/components/Roadmap";
 import Instructor from "@/components/Instructor";
 import { Analytics } from "@vercel/analytics/next";
@@ -21,6 +22,7 @@ export default function Home() {
             <main>
                 <Hero />
                 <SocialProof />
+                <Reactions />
                 <Roadmap />
                 {/* <Highlight /> */}
                 <Instructor />
