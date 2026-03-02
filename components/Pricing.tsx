@@ -97,7 +97,7 @@ export default function Pricing() {
                                                 <span className={`text-3xl md:text-5xl font-serif font-black ${plan.isFeatured ? "text-[#deb100]" : "text-[#071324]"}`}>{plan.price}</span>
                                             </div>
                                         </div>
-                                        <p className="text-sm  md:text-base font-bold text-[#22C55E]">{(plan as any).savings}</p>
+                                        {/* <p className="text-sm  md:text-base font-bold text-[#22C55E]">{(plan as any).savings}</p> */}
                                     </div>
 
                                     {/* Features List */}
