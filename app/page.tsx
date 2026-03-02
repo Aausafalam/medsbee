@@ -22,7 +22,7 @@ export default function Home() {
             <main>
                 <Hero />
                 <SocialProof />
-                <Reactions />
+                {/* <Reactions /> */}
                 <Roadmap />
                 {/* <Highlight /> */}
                 <Instructor />
