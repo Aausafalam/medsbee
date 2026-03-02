@@ -45,7 +45,7 @@ export default function SocialProof() {
     const displayTestimonials = [...socialProofData.testimonials, ...socialProofData.testimonials];
 
     return (
-        <section id="testimonials" className="py-12 md:py-16 bg-[#071324] overflow-hidden">
+        <section id="testimonials" className="py-12 md:py-16 bg-[#0F2040] overflow-hidden">
             <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="mb-0 md:mb-10 text-left">
